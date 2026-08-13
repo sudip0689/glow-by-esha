@@ -1,0 +1,125 @@
+.services {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fff9fc 0%, #fce4ec 100%);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.services-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.service-card-full {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(212, 54, 159, 0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid #d4369f;
+}
+
+.service-card-full:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(212, 54, 159, 0.2);
+}
+
+.service-card-full h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card-full .price {
+  color: #d4369f;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.service-card-full .description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.features li {
+  padding: 0.4rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.book-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #d4369f 0%, #f06292 100%);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(212, 54, 159, 0.3);
+}
+
+.services-note {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 2px dashed #d4369f;
+}
+
+.services-note h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.services-note p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 2rem 1rem;
+  }
+
+  .services-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
