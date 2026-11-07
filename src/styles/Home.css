@@ -426,3 +426,53 @@
  .hero-copy{width:61%;max-width:360px}
  .hero-copy h1,.hero-description,.hero-copy .eyebrow{ text-shadow:0 1px 8px rgba(248,245,239,.35)}
 }
+
+
+/* Final mobile spacing pass: balanced hero rhythm and consistent section gaps */
+@media(max-width:800px){
+  .hero{
+    height: min(690px, calc(100svh - 112px));
+    min-height: 570px;
+    max-height: 690px;
+    padding:34px 5vw 36px;
+  }
+  .hero-copy{align-self:center}
+  .hero-copy .eyebrow{margin:0 0 18px;line-height:1.45}
+  .hero-copy h1{margin:0 0 17px;line-height:1.02}
+  .hero-description{margin:0;line-height:1.58}
+  .hero-actions{margin-top:20px;gap:10px}
+  .hero-actions .button{padding:12px 15px;line-height:1.25}
+  .hero-actions .text-link{padding:10px 18px;line-height:1.25}
+  .intro-strip{padding:13px 5vw 14px;gap:5px}
+  .intro-strip p{margin:0}
+  .home-section{padding:40px 5vw 44px}
+  .section-heading{align-items:flex-end;margin-bottom:17px;gap:12px}
+  .section-heading .eyebrow{margin-bottom:8px}
+  .section-heading h2{margin:0;line-height:1.03}
+  .category-grid{gap:12px}
+  .category-card{min-height:285px;padding:16px}
+  .category-copy p{margin:0 0 8px;line-height:1.35}
+  .category-copy h3{line-height:.98;margin:0 0 9px}
+  .category-description{line-height:1.45}
+  .bridal-films{padding:30px 5vw 38px}
+  .films-heading{margin-bottom:14px;gap:12px}
+  .films-heading .eyebrow{margin:0 0 7px}
+  .films-heading h2{margin:0;line-height:1.05}
+  .films-grid{gap:12px}
+  .film-caption{padding-top:8px}
+  .about-teaser{padding:42px 7vw;gap:12px}
+  .about-teaser h2{line-height:1.04;margin:6px 0 10px}
+  .teaser-copy{line-height:1.6;margin:8px auto 12px}
+  .home-cta{padding:44px 16px}
+  .home-cta h2{line-height:1.02;margin:8px 0 16px}
+}
+@media(max-width:390px){
+  .hero{min-height:540px;height:min(650px,calc(100svh - 112px));padding-top:28px;padding-bottom:30px}
+  .hero-copy .eyebrow{font-size:.54rem;margin-bottom:15px}
+  .hero-copy h1{font-size:clamp(2.25rem,9vw,3.1rem);margin-bottom:14px}
+  .hero-description{font-size:.75rem;line-height:1.52}
+  .hero-actions{margin-top:17px}
+  .hero-actions .button{font-size:.68rem;padding:11px 12px}
+  .hero-actions .text-link{font-size:.75rem;padding:9px 14px}
+  .category-card{min-height:265px;padding:14px}
+}
