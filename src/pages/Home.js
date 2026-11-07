@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
+import '../styles/HomeServices.css';
 import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 
 function Home() {
@@ -17,6 +18,11 @@ function Home() {
     })).then(([red, white]) => { if (active) setHomePhotos({ red, white }); }).catch(() => { if (active) setHomePhotos({ red: [], white: [] }); }).finally(() => { if (active) setPhotosLoaded(true); });
     return () => { active = false; };
   }, []);
+  const serviceItems = [
+    { number: '01', title: 'Bridal Makeup', subtitle: 'YOUR WEDDING DAY', description: 'আপনার বিয়ের দিনের জন্য personalised bridal look, নিখুঁত detailing ও দীর্ঘস্থায়ী finishing।', image: homePhotos.red[0] },
+    { number: '02', title: 'Party Makeup', subtitle: 'YOUR SPECIAL MOMENT', description: 'Birthday, family অনুষ্ঠান ও special occasions-এর জন্য elegant, occasion-ready makeup।', image: homePhotos.red[1] || homePhotos.white[1] },
+    { number: '03', title: 'Engagement & Occasion', subtitle: 'CELEBRATE YOUR WAY', description: 'Engagement, Reception, Haldi ও অন্যান্য অনুষ্ঠানের জন্য customised makeup look।', image: homePhotos.white[0] || homePhotos.red[2] }
+  ];
   return (
     <main className="home">
       <section className="hero">
@@ -88,6 +94,33 @@ function Home() {
       <section className="about-teaser">
         <div className="about-teaser-mark">E.</div>
         <div><p className="eyebrow">A LITTLE ABOUT THE ARTIST</p><h2>It should still<br /><em>feel like you.</em></h2><p className="teaser-copy">সাজের পরেও আপনার নিজস্বতা যেন অটুট থাকে। আপনার পছন্দ ও ব্যক্তিত্বকে গুরুত্ব দিয়েই প্রতিটি লুক তৈরি করা হয়।</p><Link to="/about" className="text-link">Get to know Esha ↗</Link></div>
+      </section>
+
+      <section className="home-services" aria-labelledby="home-services-title">
+        <div className="home-services-heading">
+          <p className="eyebrow">OUR SERVICES</p>
+          <h2 id="home-services-title">Makeup for <em>every occasion.</em></h2>
+          <p>আপনার বিশেষ মুহূর্তকে আরও সুন্দর ও স্মরণীয় করে তুলতে আমাদের professional makeup services।</p>
+        </div>
+        <div className="home-services-grid">
+          {serviceItems.map(service => (
+            <article className="home-service-card" key={service.number}>
+              <div className="home-service-image">
+                {service.image ? <img src={service.image} alt={service.title + ' by Glow By Esha'} loading="lazy" /> : <div className="home-service-placeholder">G.</div>}
+                <span className="home-service-number">{service.number}</span>
+              </div>
+              <div className="home-service-content">
+                <p className="home-service-subtitle">{service.subtitle}</p>
+                <h3>{service.title}</h3>
+                <p className="home-service-description">{service.description}</p>
+                <div className="home-service-actions">
+                  <Link to="/services" className="home-service-more">Know More <span>↗</span></Link>
+                  <Link to="/contact" className="home-service-book">Book Now <span>↗</span></Link>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="home-cta"><p className="eyebrow">YOUR MOMENT, YOUR LOOK</p><h2>Let's create something<br /><em>beautiful.</em></h2><p>আপনার বিশেষ দিনের সাজ নিয়ে কথা বলতে যোগাযোগ করুন।</p><Link to="/contact" className="button button-light">Get in touch <span>↗</span></Link></section>
