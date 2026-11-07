@@ -42,3 +42,7 @@
  .about-hero-description{font-size:.78rem;line-height:1.52}
  .about-home-link{font-size:.73rem;padding:10px 14px;margin-top:17px}
 }
+
+
+.about-photo-preview{display:block;width:100%;height:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
+.about-photo-preview img{display:block;width:100%;height:100%;object-fit:cover}
