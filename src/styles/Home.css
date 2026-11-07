@@ -513,3 +513,29 @@
   .bridal-films .films-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .bridal-films .film-video-wrap{aspect-ratio:9/16}
 }
+
+
+/* Larger, clearer vertical bridal video previews on mobile */
+@media(max-width:700px){
+  .bridal-films .films-grid{
+    grid-template-columns:minmax(0,1fr);
+    max-width:100%;
+    gap:28px;
+  }
+  .bridal-films .film-card{
+    width:100%;
+    max-width:430px;
+    margin-inline:auto;
+  }
+  .bridal-films .film-video-wrap{
+    width:100%;
+    aspect-ratio:9/16;
+    max-height: min(118vw, 620px);
+  }
+  .bridal-films .film-caption{
+    padding-top:12px;
+  }
+  .bridal-films .film-caption h3{
+    font-size:1.25rem;
+  }
+}
