@@ -513,3 +513,21 @@
   .bridal-films .films-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
   .bridal-films .film-video-wrap{aspect-ratio:9/16}
 }
+
+
+/* Refined collection-card typography: let the bridal photographs lead */
+.category-card .category-number{font-size:1.25rem;letter-spacing:.02em}
+.category-card .category-number small{font-size:.5rem;letter-spacing:.14em}
+.category-card .category-copy p{font-size:.53rem;letter-spacing:.17em;margin-bottom:9px}
+.category-card .category-copy h3{font-size:clamp(2.35rem,5.4vw,3.8rem);line-height:.96;margin-bottom:10px}
+.category-card .category-description{display:block;max-width:34ch;font-size:.66rem;line-height:1.45;letter-spacing:.025em}
+.category-card .category-arrow{font-size:.66rem;letter-spacing:.06em}
+@media(max-width:800px){
+  .category-card{min-height:285px;padding:18px}
+  .category-card .category-number{font-size:1.12rem}
+  .category-card .category-number small{font-size:.46rem}
+  .category-card .category-copy p{font-size:.48rem;letter-spacing:.14em;margin-bottom:7px}
+  .category-card .category-copy h3{font-size:clamp(2.05rem,7.4vw,2.8rem);line-height:.96;margin-bottom:8px}
+  .category-card .category-description{max-width:31ch;font-size:.59rem;line-height:1.4}
+  .category-card .category-arrow{font-size:.61rem;padding-bottom:4px}
+}
