@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -10,27 +10,30 @@ import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import './styles/App.css';
 
-function App() {
+function PublicSite() {
   return (
-    <Router>
+    <div className="App">
+      <Navbar />
       <Routes>
-        <Route path="/admin" element={<Admin />} />
-        <Route path="*" element={
-          <div className="App">
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-            <Footer />
-          </div>
-        } />
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Home />} />
       </Routes>
-    </Router>
+      <Footer />
+    </div>
   );
+}
+
+function AppContent() {
+  const location = useLocation();
+  return location.pathname === '/admin' ? <Admin /> : <PublicSite />;
+}
+
+function App() {
+  return <Router><AppContent /></Router>;
 }
 
 export default App;
