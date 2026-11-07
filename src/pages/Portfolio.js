@@ -47,7 +47,7 @@ function Portfolio() {
                     <span className="image-number">{String(index + 1).padStart(2, '0')}</span>
                   </div>
                   <div className="tile-meta">
-                    <div><span>{collection.subtitle}</span><h3>{photo.name.replace(/^\d+-/, '').replace(/\.[^.]+$/, '')}</h3></div>
+                    <div><span>{collection.subtitle}</span><h3>{index === 0 ? 'The Bridal Portrait' : 'Bridal Look ' + String(index + 1).padStart(2, '0')}</h3></div>
                     <span className="tile-index">{String(index + 1).padStart(2, '0')} / {photos.length}</span>
                   </div>
                 </article>
