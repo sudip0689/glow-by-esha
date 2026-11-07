@@ -263,3 +263,13 @@
  .editorial-seal{width:48px;height:48px;bottom:60px}
  .editorial-footnote{font-size:.38rem}
 }
+
+
+/* Compact the featured bridal portrait on mobile without changing the desktop layout */
+@media(max-width:800px){
+  .hero-art{max-width:390px;padding:0 5% 4% 0;margin:0 auto}
+  .home-hero-photo{aspect-ratio:1.02/1;object-position:center 18%;}
+  .hero-frame{padding:6px 6px 0;box-shadow:7px 7px 0 rgba(180,153,119,.16)}
+  .frame-caption{padding:9px 4px 8px;font-size:.47rem}
+  .hero-stamp{width:68px;height:68px;font-size:.56rem}
+}
