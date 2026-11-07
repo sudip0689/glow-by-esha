@@ -5,3 +5,8 @@
 .footer-nav{display:flex;flex-direction:column;gap:8px}.footer-nav .eyebrow,.footer-note .eyebrow{margin-bottom:8px;color:#c5aa7d}.footer-nav a{font-size:.82rem;color:#ded7cd}
 .footer-bottom{max-width:1160px;margin:auto;padding-top:17px;border-top:1px solid #514a42;display:flex;justify-content:space-between;color:#aaa197;font-size:.68rem}
 @media(max-width:650px){.footer{padding:42px 6vw 18px}.footer-main{grid-template-columns:1fr 1fr;gap:28px}.footer-main>div:first-child{grid-column:1/-1}.footer-bottom{gap:12px;flex-wrap:wrap}}
+
+/* Consistent footer rhythm */
+.footer{padding-top:44px}
+.footer-main{gap:32px;margin-bottom:34px}
+@media(max-width:650px){.footer{padding-top:34px}.footer-main{gap:22px}.footer-main p{font-size:.8rem;line-height:1.7}}
