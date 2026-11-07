@@ -20,10 +20,11 @@ function Home() {
   }, []);
   // Temporary editorial stock photos for the service cards only.
   // Replace these demo images with Esha's own service portfolio when available.
+  // Representative stock imagery for service categories (not Glow By Esha client work).
   const serviceItems = [
-    { number: '01', title: 'Bridal Makeup', subtitle: 'YOUR WEDDING DAY', description: 'আপনার বিয়ের দিনের জন্য personalised bridal look, নিখুঁত detailing ও দীর্ঘস্থায়ী finishing।', image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85' },
+    { number: '01', title: 'Bridal Makeup', subtitle: 'YOUR WEDDING DAY', description: 'আপনার বিয়ের দিনের জন্য personalised bridal look, নিখুঁত detailing ও দীর্ঘস্থায়ী finishing।', image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85' },
     { number: '02', title: 'Party Makeup', subtitle: 'YOUR SPECIAL MOMENT', description: 'Birthday, family অনুষ্ঠান ও special occasions-এর জন্য elegant, occasion-ready makeup।', image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=85' },
-    { number: '03', title: 'Engagement & Occasion', subtitle: 'CELEBRATE YOUR WAY', description: 'Engagement, Reception, Haldi ও অন্যান্য অনুষ্ঠানের জন্য customised makeup look।', image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85' }
+    { number: '03', title: 'Engagement & Occasion', subtitle: 'CELEBRATE YOUR WAY', description: 'Engagement, Reception, Haldi ও অন্যান্য অনুষ্ঠানের জন্য customised makeup look।', image: 'https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=900&q=85' }
   ];
   return (
     <main className="home">
