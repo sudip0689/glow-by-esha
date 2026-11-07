@@ -29,7 +29,8 @@ function PublicSite() {
 
 function AppContent() {
   const location = useLocation();
-  return location.pathname === '/admin' ? <Admin /> : <PublicSite />;
+  const path = location.pathname.replace(/\/+$/, '') || '/';
+  return path.toLowerCase() === '/admin' ? <Admin /> : <PublicSite />;
 }
 
 function App() {
