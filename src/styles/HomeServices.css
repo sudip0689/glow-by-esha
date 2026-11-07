@@ -49,3 +49,19 @@
  .home-service-description{font-size:.65rem;line-height:1.48}
  .home-service-actions a{font-size:.59rem;padding:0 7px;min-height:34px}
 }
+
+ 
+/* Mobile service card readability */
+@media(max-width:800px){
+ .home-services-heading .eyebrow{font-size:.68rem}
+ .home-services-heading>p:last-child{font-size:.9rem;line-height:1.75}
+ .home-service-subtitle{font-size:.62rem;line-height:1.45;letter-spacing:.09em}
+ .home-service-content h3{font-size:1.22rem;line-height:1.2}
+ .home-service-description{font-size:.84rem;line-height:1.7}
+ .home-service-actions a{font-size:.76rem;min-height:40px;padding:0 10px}
+}
+@media(max-width:380px){
+ .home-service-content h3{font-size:1.14rem}
+ .home-service-description{font-size:.8rem;line-height:1.65}
+ .home-service-actions a{font-size:.72rem;min-height:38px}
+}
