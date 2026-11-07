@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { supabase, PHOTO_BUCKET, ADMIN_EMAIL } from '../lib/supabase';
 import '../styles/Admin.css';
 
@@ -29,7 +29,7 @@ function Admin() {
     return () => listener.subscription.unsubscribe();
   }, []);
 
-  const loadPhotos = async () => {
+  const loadPhotos = useCallback(async () => {
     setLoading(true);
     const { data, error } = await supabase.storage.from(PHOTO_BUCKET).list(folder, {
       limit: 100, sortBy: { column: 'name', order: 'asc' }
@@ -40,9 +40,9 @@ function Admin() {
       url: supabase.storage.from(PHOTO_BUCKET).getPublicUrl(folder + '/' + item.name).data.publicUrl
     })));
     setLoading(false);
-  };
+  }, [folder]);
 
-  useEffect(() => { if (session) loadPhotos(); }, [session, folder]);
+  useEffect(() => { if (session) loadPhotos(); }, [session, loadPhotos]);
 
   const signIn = async (event) => {
     event.preventDefault();
