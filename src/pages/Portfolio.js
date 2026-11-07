@@ -3,8 +3,8 @@ import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 import '../styles/Portfolio.css';
 
 const collections = [
-  { id: 'person-one', number: '01', title: 'The Red Bridal Look', subtitle: 'A celebration in red', description: 'A rich, radiant bridal look with intricate details, warm tones and timeless elegance.', folder: 'person-1-red' },
-  { id: 'person-two', number: '02', title: 'The White & Red Bengali Look', subtitle: 'Tradition, softly expressed', description: 'A classic Bengali bridal expression, paired with the beauty of the white-and-red saree and traditional adornments.', folder: 'person-2-white' }
+  { id: 'person-one', number: '01', title: 'The Red Bridal Look', subtitle: 'A celebration in red', description: 'লাল রঙের আভিজাত্য, নিখুঁত ডিটেলিং আর বাঙালি বিয়ের চিরন্তন সৌন্দর্য—একটি সাজে ঐতিহ্য ও ব্যক্তিত্বের মেলবন্ধন।', folder: 'person-1-red' },
+  { id: 'person-two', number: '02', title: 'The White & Red Bengali Look', subtitle: 'Tradition, softly expressed', description: 'সাদা-লালের চিরপরিচিত বাঙালি সাজ, সঙ্গে ঐতিহ্যবাহী অলংকার ও স্নিগ্ধ সৌন্দর্যের ছোঁয়া।', folder: 'person-2-white' }
 ];
 
 function Portfolio() {
@@ -27,7 +27,7 @@ function Portfolio() {
       <header className="portfolio-intro">
         <p className="eyebrow">GLOW BY ESHA · THE PORTFOLIO</p>
         <h1>Two brides.<br /><em>Two stories.</em></h1>
-        <p>Every look has its own personality. Explore each bridal story in its own space, with every photograph kept together.</p>
+        <p>প্রতিটি সাজের নিজস্ব গল্প আছে। প্রতিটি ব্রাইডাল লুকের ছবি আলাদা কালেকশনে সাজানো—দেখে নিন পছন্দের সাজটি।</p>
       </header>
       {collections.map(collection => {
         const photos = gallery[collection.folder] || [];
@@ -53,11 +53,11 @@ function Portfolio() {
                 </article>
               ))}
             </div>
-            {!photos.length && <p className="collection-description">New photographs coming soon.</p>}
+            {!photos.length && <p className="collection-description">নতুন ছবি খুব শীঘ্রই যোগ করা হবে।</p>}
           </section>
         );
       })}
-      <footer className="portfolio-endnote"><span>MADE WITH CARE · GLOW BY ESHA</span><p>Real artistry. Real moments. A little piece of her story.</p></footer>
+      <footer className="portfolio-endnote"><span>MADE WITH CARE · GLOW BY ESHA</span><p>যত্নে তৈরি প্রতিটি সাজ, আপনার গল্পেরই একটি অংশ।</p></footer>
     </main>
   );
 }
