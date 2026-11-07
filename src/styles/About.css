@@ -26,3 +26,16 @@
   .about-layout{gap:28px}
   .about-photo{min-height:290px}
 }
+
+/* Match About page type scale and spacing with the rest of the site */
+.about-page{max-width:1180px;padding:64px 6vw 76px}
+.simple-page-head h1{font-size:clamp(2.8rem,5.5vw,4.8rem)}
+.simple-page-head>p:last-child{font-size:.9rem;line-height:1.75}
+.about-story h2{font-size:clamp(2.2rem,4vw,3.35rem)}
+@media(max-width:760px){
+ .about-page{padding:38px 5vw 52px}
+ .simple-page-head h1{font-size:clamp(2.65rem,10vw,3.5rem)}
+ .simple-page-head>p:last-child{font-size:.82rem;line-height:1.65}
+ .about-photo{min-height:280px}
+ .about-story h2{font-size:clamp(2rem,7.8vw,2.65rem)}
+}
