@@ -3,8 +3,8 @@ import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 import '../styles/Portfolio.css';
 
 const collections = [
-  { id: 'person-one', number: '01', title: 'The Red Bridal Look', subtitle: 'A celebration in red', description: 'লাল রঙের আভিজাত্য, নিখুঁত ডিটেলিং আর বাঙালি বিয়ের চিরন্তন সৌন্দর্য—একটি সাজে ঐতিহ্য ও ব্যক্তিত্বের মেলবন্ধন।', folder: 'person-1-red' },
-  { id: 'person-two', number: '02', title: 'The White & Red Bengali Look', subtitle: 'Tradition, softly expressed', description: 'সাদা-লালের চিরপরিচিত বাঙালি সাজ, সঙ্গে ঐতিহ্যবাহী অলংকার ও স্নিগ্ধ সৌন্দর্যের ছোঁয়া।', folder: 'person-2-white' }
+  { id: 'person-one', number: '01', title: 'Muslim Bridal Look', subtitle: 'Elegance with a personal touch', description: 'আভিজাত্য, নিখুঁত ডিটেলিং আর ব্যক্তিত্বের ছোঁয়ায় সাজানো এক বিশেষ মুসলিম ব্রাইডাল লুক।', folder: 'person-1-red' },
+  { id: 'person-two', number: '02', title: 'Briddhi Look', subtitle: 'A graceful traditional look', description: 'ঐতিহ্য ও আধুনিকতার মেলবন্ধনে যত্নে তৈরি এক অনন্য ব্রাইডাল সাজ।', folder: 'person-2-white' }
 ];
 
 function Portfolio() {
