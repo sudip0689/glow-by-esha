@@ -13,7 +13,7 @@ function About() {
     }).then(({ data, error }) => {
       if (!active || error || !data) return;
       // Keep Esha's Meet page portrait fixed to the outdoor photo selected by the owner.
-      const image = data.find(item => item.name === '760145.jpg');
+      const image = data.find(item => item.name === '760145.jpg' || item.name.endsWith('-760145.jpg'));
       if (image) {
         const url = supabase.storage.from(PHOTO_BUCKET)
           .getPublicUrl('other-photos/' + image.name).data.publicUrl;
@@ -33,7 +33,7 @@ function About() {
           <Link className="about-home-link" to="/">← Back to Home</Link>
         </div>
         <div className="about-hero-art" aria-label="Portrait of Esha">
-          {portrait ? <button type="button" className="about-photo-preview" onClick={() => setPreviewOpen(true)} aria-label="View Esha portrait full screen"><img src={portrait} alt="Esha by the riverside" /></button> : <div className="about-photo-empty"><span>ESHA'S PORTRAIT</span><small>Upload the portrait to Other Photos in Admin</small></div>}
+          {portrait ? <button type="button" className="about-photo-preview" onClick={() => setPreviewOpen(true)} aria-label="View Esha portrait full screen"><img src={portrait} alt="Esha's outdoor portrait" /></button> : <div className="about-photo-empty"><span>ESHA'S PORTRAIT</span><small>Upload the portrait to Other Photos in Admin</small></div>}
         </div>
       </section>
       {previewOpen && <div className="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" onClick={() => setPreviewOpen(false)}><button type="button" className="lightbox-close" onClick={() => setPreviewOpen(false)} aria-label="Close preview">×</button><img src={portrait} alt="Esha's outdoor portrait" onClick={event => event.stopPropagation()} /></div>}
