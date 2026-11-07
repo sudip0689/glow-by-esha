@@ -5,6 +5,7 @@ import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 
 function Home() {
   const [homePhotos, setHomePhotos] = useState({ red: [], white: [] });
+  const [activeVideo, setActiveVideo] = useState(null);
   useEffect(() => {
     let active = true;
     Promise.all(['person-1-red', 'person-2-white'].map(async folder => {
@@ -70,11 +71,11 @@ function Home() {
         </div>
         <div className="films-grid">
           <article className="film-card">
-            <div className="film-video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/dZkeBs8gInM?rel=0" title="The Bengali Bride — Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
+            <div className="film-video-wrap">{activeVideo === "dZkeBs8gInM" ? <iframe src="https://www.youtube-nocookie.com/embed/dZkeBs8gInM?autoplay=1&rel=0" title="The Bengali Bride — Glow By Esha" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /> : <button className="film-preview" onClick={() => setActiveVideo("dZkeBs8gInM")} aria-label="Play The Bengali Bride"><img src="https://img.youtube.com/vi/dZkeBs8gInM/hqdefault.jpg" alt="The Bengali bride video preview" /><span className="film-play">▶</span></button>}</div>
             <div className="film-caption"><span className="film-index">01 / BRIDAL</span><h3>The Bengali bride</h3></div>
           </article>
           <article className="film-card">
-            <div className="film-video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/LG1z4GUeZBI?rel=0" title="The Elegant Bride — Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
+            <div className="film-video-wrap">{activeVideo === "LG1z4GUeZBI" ? <iframe src="https://www.youtube-nocookie.com/embed/LG1z4GUeZBI?autoplay=1&rel=0" title="The Elegant Bride — Glow By Esha" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /> : <button className="film-preview" onClick={() => setActiveVideo("LG1z4GUeZBI")} aria-label="Play The Elegant Bride"><img src="https://img.youtube.com/vi/LG1z4GUeZBI/hqdefault.jpg" alt="The elegant bride video preview" /><span className="film-play">▶</span></button>}</div>
             <div className="film-caption"><span className="film-index">02 / BRIDAL</span><h3>The elegant bride</h3></div>
           </article>
         </div>
