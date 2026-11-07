@@ -7,6 +7,7 @@ function Home() {
   const [homePhotos, setHomePhotos] = useState({ red: [], white: [] });
   const [photosLoaded, setPhotosLoaded] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
+  const [heroPreviewOpen, setHeroPreviewOpen] = useState(false);
   const heroPhoto = homePhotos.red.find(url => /DSC00616\.JPG/i.test(decodeURIComponent(url))) || homePhotos.red[0];
   useEffect(() => {
     let active = true;
@@ -31,13 +32,14 @@ function Home() {
         </div>
         <div className="hero-art" aria-label="Portfolio photo area">
           <div className="hero-frame">
-            {heroPhoto ? <img className="home-hero-photo" src={heroPhoto} alt="Featured red bridal look by Glow By Esha" fetchPriority="high" decoding="async" /> : <div className="photo-placeholder" role="status">{photosLoaded ? <><span>GLOW BY ESHA</span><small>Bridal portfolio</small></> : <span>Loading portfolio…</span>}</div>}
+            {heroPhoto ? <button type="button" className="home-hero-image-button" onClick={() => setHeroPreviewOpen(true)} aria-label="View featured bridal photo full screen"><img className="home-hero-photo" src={heroPhoto} alt="Featured red bridal look by Glow By Esha" fetchPriority="high" decoding="async" /></button> : <div className="photo-placeholder" role="status">{photosLoaded ? <><span>GLOW BY ESHA</span><small>Bridal portfolio</small></> : <span>Loading portfolio…</span>}</div>}
             <div className="frame-caption"><span>THE ART OF THE GLOW</span><span>01 / 01</span></div>
           </div>
           <span className="hero-stamp">GLOW<br />BY ESHA</span>
         </div>
       </section>
 
+      {heroPreviewOpen && <div className="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" onClick={() => setHeroPreviewOpen(false)}><button type="button" className="lightbox-close" onClick={() => setHeroPreviewOpen(false)} aria-label="Close preview">×</button><img src={heroPhoto} alt="Featured red bridal look by Glow By Esha" onClick={event => event.stopPropagation()} /></div>}
       <section className="intro-strip">
         <p>MAKEUP THAT FEELS LIKE YOU</p>
         <span>আপনার পছন্দ · যত্নশীল কাজ · চিরন্তন সৌন্দর্য</span>
