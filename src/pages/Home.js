@@ -6,25 +6,30 @@ import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 
 function Home() {
   const [homePhotos, setHomePhotos] = useState({ red: [], white: [] });
+  const [servicePhotos, setServicePhotos] = useState([]);
   const [photosLoaded, setPhotosLoaded] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
   const [heroPreviewOpen, setHeroPreviewOpen] = useState(false);
   const heroPhoto = homePhotos.red.find(url => /DSC00616\.JPG/i.test(decodeURIComponent(url))) || homePhotos.red[0];
   useEffect(() => {
     let active = true;
-    Promise.all(['person-1-red', 'person-2-white'].map(async folder => {
-      const { data } = await supabase.storage.from(PHOTO_BUCKET).list(folder, { limit: 20, sortBy: { column: 'name', order: 'asc' } });
+    Promise.all(['person-1-red', 'person-2-white', 'other-photos'].map(async folder => {
+      const { data } = await supabase.storage.from(PHOTO_BUCKET).list(folder, { limit: 100, sortBy: { column: 'name', order: 'asc' } });
       return (data || []).filter(item => item.name && !item.name.startsWith('.')).map(item => supabase.storage.from(PHOTO_BUCKET).getPublicUrl(folder + '/' + item.name).data.publicUrl);
-    })).then(([red, white]) => { if (active) setHomePhotos({ red, white }); }).catch(() => { if (active) setHomePhotos({ red: [], white: [] }); }).finally(() => { if (active) setPhotosLoaded(true); });
+    })).then(([red, white, other]) => {
+      if (active) {
+        setHomePhotos({ red, white });
+        // The three latest service photos were uploaded in Bridal, Party, Special order.
+        setServicePhotos(other.slice(-3));
+      }
+    }).catch(() => { if (active) { setHomePhotos({ red: [], white: [] }); setServicePhotos([]); } }).finally(() => { if (active) setPhotosLoaded(true); });
     return () => { active = false; };
   }, []);
-  // Temporary editorial stock photos for the service cards only.
-  // Replace these demo images with Esha's own service portfolio when available.
-  // Representative stock imagery for service categories (not Glow By Esha client work).
+  // Use the three latest photos uploaded by Esha for the service categories.
   const serviceItems = [
-    { number: '01', title: 'Bridal Makeup', subtitle: 'YOUR WEDDING DAY', description: 'আপনার বিয়ের দিনের জন্য personalised bridal look, নিখুঁত detailing ও দীর্ঘস্থায়ী finishing।', image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85' },
-    { number: '02', title: 'Party Makeup', subtitle: 'YOUR SPECIAL MOMENT', description: 'Birthday, family অনুষ্ঠান ও special occasions-এর জন্য elegant, occasion-ready makeup।', image: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=85' },
-    { number: '03', title: 'Engagement & Occasion', subtitle: 'CELEBRATE YOUR WAY', description: 'Engagement, Reception, Haldi ও অন্যান্য অনুষ্ঠানের জন্য customised makeup look।', image: 'https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=900&q=85' }
+    { number: '01', title: 'Bridal Makeup', subtitle: 'YOUR WEDDING DAY', description: 'আপনার বিয়ের দিনের জন্য personalised bridal look, নিখুঁত detailing ও দীর্ঘস্থায়ী finishing।', image: servicePhotos[0] },
+    { number: '02', title: 'Party Makeup', subtitle: 'YOUR SPECIAL MOMENT', description: 'Birthday, family অনুষ্ঠান ও special occasions-এর জন্য elegant, occasion-ready makeup।', image: servicePhotos[1] },
+    { number: '03', title: 'Engagement & Occasion', subtitle: 'CELEBRATE YOUR WAY', description: 'Engagement, Reception, Haldi ও অন্যান্য অনুষ্ঠানের জন্য customised makeup look।', image: servicePhotos[2] }
   ];
   return (
     <main className="home">
