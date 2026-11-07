@@ -1,63 +1,7 @@
-.footer {
-  background: linear-gradient(135deg, #d4369f 0%, #f06292 100%);
-  color: white;
-  padding: 3rem 2rem 1rem;
-  margin-top: 4rem;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto 2rem;
-}
-
-.footer-section h3,
-.footer-section h4 {
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.footer-section p {
-  opacity: 0.9;
-  font-size: 0.95rem;
-}
-
-.social-links,
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.social-links a,
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  opacity: 0.9;
-}
-
-.social-links a:hover,
-.footer-links a:hover {
-  opacity: 1;
-  transform: translateX(5px);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-
-  .footer {
-    padding: 2rem 1rem 1rem;
-  }
-}
+.footer{background:#29241f;color:#f8f5ef;padding:58px 6vw 20px;margin-top:0}
+.footer-main{max-width:1160px;margin:0 auto 46px;display:grid;grid-template-columns:2fr 1fr 1.4fr;gap:40px}
+.footer-brand{display:inline-block;font-size:.9rem;font-weight:700;letter-spacing:.17em}.footer-brand span{display:block;color:#c5aa7d;font-size:.58rem;letter-spacing:.24em;margin-top:5px}
+.footer-main p{color:#c6beb3;font-size:.84rem;margin-top:18px;line-height:1.9}
+.footer-nav{display:flex;flex-direction:column;gap:8px}.footer-nav .eyebrow,.footer-note .eyebrow{margin-bottom:8px;color:#c5aa7d}.footer-nav a{font-size:.82rem;color:#ded7cd}
+.footer-bottom{max-width:1160px;margin:auto;padding-top:17px;border-top:1px solid #514a42;display:flex;justify-content:space-between;color:#aaa197;font-size:.68rem}
+@media(max-width:650px){.footer{padding:42px 6vw 18px}.footer-main{grid-template-columns:1fr 1fr;gap:28px}.footer-main>div:first-child{grid-column:1/-1}.footer-bottom{gap:12px;flex-wrap:wrap}}
