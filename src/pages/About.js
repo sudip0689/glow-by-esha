@@ -7,10 +7,19 @@ function About() {
   const [portrait, setPortrait] = useState('');
   const [previewOpen, setPreviewOpen] = useState(false);
   useEffect(() => {
-    // This is the exact object path verified in Supabase Storage.
-    const imagePath = 'other-photos/1794040367441-760145.jpg';
-    const { data } = supabase.storage.from(PHOTO_BUCKET).getPublicUrl(imagePath);
-    setPortrait(data.publicUrl);
+    let active = true;
+    const loadPortrait = async () => {
+      const { data, error } = await supabase
+        .from('site_settings')
+        .select('value')
+        .eq('key', 'meet_esha_portrait_path')
+        .maybeSingle();
+      if (error || !data?.value) return;
+      const { data: image } = supabase.storage.from(PHOTO_BUCKET).getPublicUrl(data.value);
+      if (active) setPortrait(image.publicUrl);
+    };
+    loadPortrait();
+    return () => { active = false; };
   }, []);
 
   return (
