@@ -28,7 +28,7 @@ function Home() {
         </div>
         <div className="hero-art" aria-label="Portfolio photo area">
           <div className="hero-frame">
-            {homePhotos.red[0] ? <img className="home-hero-photo" src={homePhotos.red[0]} alt="Featured bridal makeup by Glow By Esha" /> : <div className="photo-placeholder"><span>GLOW BY ESHA</span><small>Bridal artistry · Personal expression</small></div>}
+            <img className="home-hero-photo" src={supabase.storage.from(PHOTO_BUCKET).getPublicUrl("person-1-red/DSC00616.JPG").data.publicUrl} alt="Featured red bridal look by Glow By Esha" />
             <div className="frame-caption"><span>THE ART OF THE GLOW</span><span>01 / 01</span></div>
           </div>
           <span className="hero-stamp">GLOW<br />BY ESHA</span>
