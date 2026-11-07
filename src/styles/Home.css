@@ -71,3 +71,21 @@
 .film-index{font-size:.54rem;letter-spacing:.16em;color:var(--gold)}
 .film-caption h3{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,2vw,1.35rem);font-weight:500;margin:3px 0 0;color:var(--ink)}
 @media(max-width:700px){.bridal-films{padding:22px 6vw 54px}.films-heading{margin-bottom:16px}.films-grid{gap:12px;max-width:100%}.film-video-wrap{aspect-ratio:4/5}.film-play{width:36px;height:36px}.film-caption h3{font-size:1.05rem}}
+
+/* Video showcase: give the Shorts previews more presence on mobile */
+.bridal-films{padding-top:30px;padding-bottom:72px}
+.films-grid{width:100%;max-width:760px;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,3vw,24px)}
+.film-video-wrap{width:100%;aspect-ratio:9/16;max-height:430px;border:1px solid rgba(170,137,88,.35);box-shadow:0 8px 24px rgba(40,35,31,.10)}
+.film-video-wrap img{width:100%;height:100%;object-fit:cover;object-position:center}
+.film-play{width:46px;height:46px;font-size:.9rem}
+.film-caption{padding:12px 0 0}
+.film-caption h3{font-size:clamp(1.05rem,2.4vw,1.5rem)}
+@media(max-width:700px){
+  .bridal-films{padding:24px 5vw 58px}
+  .films-grid{width:100%;max-width:none;gap:12px}
+  .film-video-wrap{aspect-ratio:9/16;max-height:none}
+  .film-play{width:38px;height:38px;font-size:.76rem}
+  .film-caption{padding-top:9px}
+  .film-index{font-size:.49rem;letter-spacing:.12em}
+  .film-caption h3{font-size:clamp(.94rem,4vw,1.15rem);line-height:1.2}
+}
