@@ -19,7 +19,7 @@ function Home() {
     })).then(([red, white, other]) => {
       if (active) {
         setHomePhotos({ red, white });
-        // The three latest service photos were uploaded in Bridal, Party, Special order.
+        // Storage listing order is Party, Bridal, Special; map each photo to its correct service.
         setServicePhotos(other.slice(-3));
       }
     }).catch(() => { if (active) { setHomePhotos({ red: [], white: [] }); setServicePhotos([]); } }).finally(() => { if (active) setPhotosLoaded(true); });
@@ -27,8 +27,8 @@ function Home() {
   }, []);
   // Use the three latest photos uploaded by Esha for the service categories.
   const serviceItems = [
-    { number: '01', title: 'Bridal Makeup', subtitle: 'YOUR WEDDING DAY', description: 'আপনার বিয়ের দিনের জন্য personalised bridal look, নিখুঁত detailing ও দীর্ঘস্থায়ী finishing।', image: servicePhotos[0] },
-    { number: '02', title: 'Party Makeup', subtitle: 'YOUR SPECIAL MOMENT', description: 'Birthday, family অনুষ্ঠান ও special occasions-এর জন্য elegant, occasion-ready makeup।', image: servicePhotos[1] },
+    { number: '01', title: 'Bridal Makeup', subtitle: 'YOUR WEDDING DAY', description: 'আপনার বিয়ের দিনের জন্য personalised bridal look, নিখুঁত detailing ও দীর্ঘস্থায়ী finishing।', image: servicePhotos[1] },
+    { number: '02', title: 'Party Makeup', subtitle: 'YOUR SPECIAL MOMENT', description: 'Birthday, family অনুষ্ঠান ও special occasions-এর জন্য elegant, occasion-ready makeup।', image: servicePhotos[0] },
     { number: '03', title: 'Engagement & Occasion', subtitle: 'CELEBRATE YOUR WAY', description: 'Engagement, Reception, Haldi ও অন্যান্য অনুষ্ঠানের জন্য customised makeup look।', image: servicePhotos[2] }
   ];
   return (
