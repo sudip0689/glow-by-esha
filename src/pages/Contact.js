@@ -10,7 +10,7 @@ function Contact() {
     event.preventDefault();
     const nextErrors = {};
     if (!form.name.trim()) nextErrors.name = 'Please enter your name.';
-    if (!/^[+0-9\\s()-]{8,18}$/.test(form.phone.trim())) nextErrors.phone = 'Please enter a valid mobile number.';
+    if (!/^[+0-9\s()-]{8,18}$/.test(form.phone.trim())) nextErrors.phone = 'Please enter a valid mobile number.';
     if (!form.date) nextErrors.date = 'Please select your event date.';
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length) return;
@@ -25,7 +25,7 @@ function Contact() {
       'Details: ' + (form.message.trim() || 'Not specified'),
       '',
       'Please let me know your availability and pricing.'
-    ].join('\\n');
+    ].join('\n');
     window.open('https://wa.me/918116399882?text=' + encodeURIComponent(message), '_blank', 'noopener,noreferrer');
   };
   return (
