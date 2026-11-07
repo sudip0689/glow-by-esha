@@ -23,12 +23,25 @@ function About() {
 
   return (
     <main className="about-page">
-      <header className="simple-page-head"><p className="eyebrow">THE ARTIST</p><h1>Meet <em>Esha.</em></h1><p>A personal approach to makeup, beauty and self-expression.</p><Link className="about-home-link" to="/">← Back to Home</Link></header>
-      <section className="about-layout">
+      <section className="about-hero">
+        <div className="about-hero-copy">
+          <p className="eyebrow">THE ARTIST · GLOW BY ESHA</p>
+          <h1>Meet <em>Esha.</em></h1>
+          <p className="about-hero-description">A personal approach to makeup, beauty and self-expression.</p>
+          <Link className="about-home-link" to="/">← Back to Home</Link>
+        </div>
         <div className="about-photo">
           {portrait ? <img src={portrait} alt="Esha by the riverside" /> : <div className="about-photo-empty"><span>ESHA'S PORTRAIT</span><small>Upload the portrait to Other Photos in Admin</small></div>}
         </div>
-        <div className="about-story"><p className="eyebrow">A NOTE FROM ESHA</p><h2>Makeup should highlight you,<br /><em>not hide you.</em></h2><p>Glow By Esha is a space to celebrate individual beauty through thoughtful makeup artistry. The focus is on understanding each person's style, occasion and comfort, then creating a look that feels like them.</p><p>This page will be updated with Esha's personal story, training and experience once those details are confirmed.</p><div className="about-values"><span>PERSONAL STYLE</span><span>THOUGHTFUL DETAILS</span><span>CONFIDENT BEAUTY</span></div></div>
+      </section>
+      <section className="about-story">
+        <p className="eyebrow">A NOTE FROM ESHA</p>
+        <h2>Makeup should highlight you,<br /><em>not hide you.</em></h2>
+        <div className="about-story-copy">
+          <p>Glow By Esha is a space to celebrate individual beauty through thoughtful makeup artistry. The focus is on understanding each person's style, occasion and comfort, then creating a look that feels like them.</p>
+          <p>This page will be updated with Esha's personal story, training and experience once those details are confirmed.</p>
+        </div>
+        <div className="about-values"><span>PERSONAL STYLE</span><span>THOUGHTFUL DETAILS</span><span>CONFIDENT BEAUTY</span></div>
       </section>
     </main>
   );
