@@ -25,6 +25,31 @@ function Home() {
         </div>
       </section>
 
+      <section className="bridal-films" aria-labelledby="bridal-films-title">
+        <div className="films-heading">
+          <div>
+            <p className="eyebrow">BEHIND EVERY BEAUTIFUL LOOK</p>
+            <h2 id="bridal-films-title">Bridal <em>films.</em></h2>
+            <p className="films-intro">A closer look at the details, the artistry and the final glow.</p>
+          </div>
+          <span className="films-edition">GLOW BY ESHA<br />MOVING PORTRAITS · 01—02</span>
+        </div>
+        <div className="films-grid">
+          <article className="film-card">
+            <div className="film-video-wrap">
+              <iframe src="https://www.youtube-nocookie.com/embed/dZkeBs8gInM?rel=0" title="Traditional Bengali Bridal look by Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+            </div>
+            <div className="film-caption"><span className="film-index">01 / BRIDAL FILM</span><h3>The Bengali bride</h3><p>Traditional · Timeless · Beautiful</p></div>
+          </article>
+          <article className="film-card film-card-offset">
+            <div className="film-video-wrap">
+              <iframe src="https://www.youtube-nocookie.com/embed/LG1z4GUeZBI?rel=0" title="Elegant Bridal Look by Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+            </div>
+            <div className="film-caption"><span className="film-index">02 / BRIDAL FILM</span><h3>The elegant bride</h3><p>Soft radiance · Golden details</p></div>
+          </article>
+        </div>
+      </section>
+
       <section className="intro-strip">
         <p>MAKEUP THAT FEELS LIKE YOU</p>
         <span>Personalised looks · Thoughtful details · Timeless beauty</span>
