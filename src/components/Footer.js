@@ -1,34 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Footer.css';
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-section">
-          <h3>Glow By Esha</h3>
-          <p>Professional Makeup Artist & Beauty Specialist</p>
-        </div>
-        <div className="footer-section">
-          <h4>Follow Us</h4>
-          <div className="social-links">
-            <a href="#instagram">Instagram</a>
-            <a href="#facebook">Facebook</a>
-            <a href="#twitter">Twitter</a>
-          </div>
-        </div>
-        <div className="footer-section">
-          <h4>Quick Links</h4>
-          <div className="footer-links">
-            <a href="#portfolio">Portfolio</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
+      <div className="footer-main">
+        <div><Link to="/" className="footer-brand">GLOW BY ESHA<span>MAKEUP ARTISTRY</span></Link><p>Thoughtful beauty. Personal expression.<br />A portfolio of makeup artistry.</p></div>
+        <div className="footer-nav"><span className="eyebrow">EXPLORE</span><Link to="/portfolio">Portfolio</Link><Link to="/about">About Esha</Link><Link to="/services">Services</Link><Link to="/contact">Contact</Link></div>
+        <div className="footer-note"><span className="eyebrow">A NOTE</span><p>Every face is different.<br />Every look should be, too.</p></div>
       </div>
-      <div className="footer-bottom">
-        <p>&copy; 2024 Glow By Esha. All rights reserved. ✨</p>
-      </div>
+      <div className="footer-bottom"><span>© {new Date().getFullYear()} Glow By Esha</span><span>Made with care · India</span></div>
     </footer>
   );
 }
