@@ -7,20 +7,10 @@ function About() {
   const [portrait, setPortrait] = useState('');
   const [previewOpen, setPreviewOpen] = useState(false);
   useEffect(() => {
-    let active = true;
-    supabase.storage.from(PHOTO_BUCKET).list('other-photos', {
-      limit: 100, sortBy: { column: 'created_at', order: 'desc' }
-    }).then(({ data, error }) => {
-      if (!active || error || !data) return;
-      // Keep Esha's Meet page portrait fixed to the outdoor photo selected by the owner.
-      const image = data.find(item => item.name.toLowerCase().includes('760145'));
-      if (image) {
-        const url = supabase.storage.from(PHOTO_BUCKET)
-          .getPublicUrl('other-photos/' + image.name).data.publicUrl;
-        setPortrait(url);
-      }
-    });
-    return () => { active = false; };
+    // This is the exact object path verified in Supabase Storage.
+    const imagePath = 'other-photos/1794040367441-760145.jpg';
+    const { data } = supabase.storage.from(PHOTO_BUCKET).getPublicUrl(imagePath);
+    setPortrait(data.publicUrl);
   }, []);
 
   return (
