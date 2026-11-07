@@ -42,3 +42,57 @@
 .collection-gallery .bridal-tile-feature{grid-column:span 6}
 @media(max-width:850px){.collection-gallery .portfolio-tile{grid-column:span 6}.collection-gallery .bridal-tile-feature{grid-column:span 12}}
 @media(max-width:540px){.bridal-collection{padding:28px 0 52px;margin-top:12px}.collection-heading{margin-bottom:28px}.collection-kicker{font-size:.49rem;letter-spacing:.1em}.collection-heading h2{font-size:2.45rem}.collection-gallery{grid-template-columns:1fr;gap:25px}.collection-gallery .portfolio-tile,.collection-gallery .bridal-tile-feature{grid-column:span 1}.collection-gallery .bridal-image-wrap,.collection-gallery .bridal-tile-feature .bridal-image-wrap{aspect-ratio:4/5}}
+
+
+/* Mobile-first bridal editorial gallery refresh */
+.bridal-portfolio{max-width:1180px;padding-top:54px}
+.bridal-portfolio .portfolio-intro{margin-bottom:42px;padding:0 12px}
+.bridal-portfolio .portfolio-intro h1{font-size:clamp(3rem,9vw,5.6rem)}
+.bridal-collection{margin-top:30px;padding:36px 0 64px}
+.collection-heading{max-width:650px;margin-bottom:26px}
+.collection-kicker{font-size:.62rem}
+.collection-heading h2{max-width:620px;margin:12px auto;font-size:clamp(2.2rem,5vw,3.8rem)}
+.collection-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 20px;align-items:start}
+.collection-gallery .portfolio-tile,
+.collection-gallery .bridal-tile-feature{grid-column:span 1;min-width:0}
+.collection-gallery .bridal-tile-feature{grid-column:span 2}
+.collection-gallery .bridal-image-wrap,
+.collection-gallery .bridal-tile-feature .bridal-image-wrap{aspect-ratio:4/5;overflow:hidden}
+.collection-gallery .bridal-tile-feature .bridal-image-wrap{aspect-ratio:4/5}
+.collection-gallery .bridal-image-wrap img{object-fit:cover;object-position:center 28%}
+.collection-gallery .tile-meta{padding:11px 1px 0}
+.collection-gallery .tile-meta h3{font-size:1.05rem;line-height:1.2}
+.collection-gallery .tile-meta>div>span{font-size:.55rem}
+.collection-gallery .tile-index{font-size:.55rem}
+.bridal-tile{transition:transform .25s ease}
+.bridal-image-wrap{background:#e8ded4}
+.bridal-image-wrap img{transition:transform .55s ease}
+@media(max-width:700px){
+ .bridal-portfolio{padding:38px 16px 58px}
+ .bridal-portfolio .portfolio-intro{margin-bottom:32px;padding:0 4px}
+ .bridal-portfolio .portfolio-intro h1{font-size:clamp(2.8rem,12vw,4rem);line-height:.98}
+ .bridal-portfolio .portfolio-intro>p:last-child{font-size:.88rem;line-height:1.75}
+ .bridal-collection{padding:27px 0 42px;margin-top:18px}
+ .collection-heading{margin-bottom:22px}
+ .collection-kicker{font-size:.52rem;letter-spacing:.1em;padding-bottom:11px;margin-bottom:22px}
+ .collection-heading h2{font-size:clamp(2rem,8.5vw,2.7rem);line-height:1.06}
+ .collection-heading>p:last-child{font-size:.83rem;line-height:1.7}
+ .collection-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px;margin-top:24px}
+ .collection-gallery .portfolio-tile{grid-column:span 1}
+ .collection-gallery .bridal-tile-feature{grid-column:1 / -1}
+ .collection-gallery .bridal-image-wrap,
+ .collection-gallery .bridal-tile-feature .bridal-image-wrap{aspect-ratio:3/4}
+ .collection-gallery .bridal-tile-feature .bridal-image-wrap{aspect-ratio:4/5}
+ .collection-gallery .tile-meta{padding:9px 0 0;gap:5px}
+ .collection-gallery .tile-meta h3{font-size:.91rem}
+ .collection-gallery .tile-meta>div>span{font-size:.49rem;letter-spacing:.08em}
+ .collection-gallery .tile-index{font-size:.48rem;letter-spacing:.04em}
+ .image-number{right:10px;bottom:10px;font-size:.58rem}
+ .portfolio-endnote{margin-top:36px}
+ .portfolio-endnote p{font-size:1.2rem}
+}
+@media(max-width:360px){
+ .bridal-portfolio{padding-left:12px;padding-right:12px}
+ .collection-gallery{gap:18px 9px}
+ .collection-gallery .tile-meta h3{font-size:.82rem}
+}
