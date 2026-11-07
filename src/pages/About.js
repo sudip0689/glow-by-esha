@@ -13,7 +13,7 @@ function About() {
     }).then(({ data, error }) => {
       if (!active || error || !data) return;
       // Keep Esha's Meet page portrait fixed to the outdoor photo selected by the owner.
-      const image = data.find(item => item.name === '760145.jpg' || item.name.endsWith('-760145.jpg'));
+      const image = data.find(item => item.name.toLowerCase().includes('760145'));
       if (image) {
         const url = supabase.storage.from(PHOTO_BUCKET)
           .getPublicUrl('other-photos/' + image.name).data.publicUrl;
