@@ -7,7 +7,7 @@ function Home() {
   const [homePhotos, setHomePhotos] = useState({ red: [], white: [] });
   const [photosLoaded, setPhotosLoaded] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
-  const heroPhoto = homePhotos.red.find(url => /DSC00616\\.JPG/i.test(decodeURIComponent(url))) || homePhotos.red[0];
+  const heroPhoto = homePhotos.red.find(url => /DSC00616\.JPG/i.test(decodeURIComponent(url))) || homePhotos.red[0];
   useEffect(() => {
     let active = true;
     Promise.all(['person-1-red', 'person-2-white'].map(async folder => {
@@ -31,7 +31,7 @@ function Home() {
         </div>
         <div className="hero-art" aria-label="Portfolio photo area">
           <div className="hero-frame">
-            <img className="home-hero-photo" src={homePhotos.red.find(url => /DSC00616\.JPG/i.test(decodeURIComponent(url))) || homePhotos.red[0]} alt="Featured red bridal look by Glow By Esha" />
+            {heroPhoto ? <img className="home-hero-photo" src={heroPhoto} alt="Featured red bridal look by Glow By Esha" fetchPriority="high" decoding="async" /> : <div className="photo-placeholder" role="status">{photosLoaded ? <><span>GLOW BY ESHA</span><small>Bridal portfolio</small></> : <span>Loading portfolio…</span>}</div>}
             <div className="frame-caption"><span>THE ART OF THE GLOW</span><span>01 / 01</span></div>
           </div>
           <span className="hero-stamp">GLOW<br />BY ESHA</span>
