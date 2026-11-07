@@ -46,9 +46,16 @@ function Home() {
           <Link to="/portfolio" className="text-link">View all work ↗</Link>
         </div>
         <div className="category-grid">
-          <Link to="/portfolio" className="category-card category-bridal" style={homePhotos.red[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.04),rgba(25,16,15,.76)),url(" + homePhotos.red[0] + ")" } : {}}><span className="category-number">01</span><div><p>THE CELEBRATION</p><h3>Bridal looks</h3></div><span className="category-arrow">↗</span></Link>
-          <Link to="/portfolio" className="category-card category-party" style={homePhotos.white[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.04),rgba(25,16,15,.76)),url(" + homePhotos.white[0] + ")" } : {}}><span className="category-number">02</span><div><p>THE OCCASION</p><h3>Party & event</h3></div><span className="category-arrow">↗</span></Link>
-          <Link to="/portfolio" className="category-card category-natural" style={homePhotos.red[1] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.04),rgba(25,16,15,.76)),url(" + homePhotos.red[1] + ")" } : {}}><span className="category-number">03</span><div><p>THE EVERYDAY</p><h3>Soft glam</h3></div><span className="category-arrow">↗</span></Link>
+          <Link to="/portfolio" className="category-card category-bridal" style={homePhotos.red[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.red[0] + ")" } : {}}>
+            <span className="category-number">01 <small> / 10 LOOKS</small></span>
+            <div className="category-copy"><p>THE RED BRIDAL COLLECTION</p><h3>Red Bridal<br /><em>Looks</em></h3><span className="category-description">Timeless details. A statement of tradition.</span></div>
+            <span className="category-arrow">Explore collection ↗</span>
+          </Link>
+          <Link to="/portfolio" className="category-card category-party" style={homePhotos.white[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.white[0] + ")" } : {}}>
+            <span className="category-number">02 <small> / 05 LOOKS</small></span>
+            <div className="category-copy"><p>THE BENGALI BRIDAL COLLECTION</p><h3>White & Red<br /><em>Bengali Bride</em></h3><span className="category-description">Classic elegance, rooted in tradition.</span></div>
+            <span className="category-arrow">Explore collection ↗</span>
+          </Link>
         </div>
       </section>
 
