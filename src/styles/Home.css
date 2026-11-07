@@ -535,3 +535,24 @@
 
 .home-hero-image-button{display:block;width:100%;height:100%;padding:0;border:0;background:transparent;cursor:zoom-in;text-align:left}
 .home-hero-image-button .home-hero-photo{display:block}
+
+ 
+/* Mobile readability pass: retain editorial layout, improve small text */
+@media(max-width:800px){
+ .hero-copy .eyebrow,.home-section .eyebrow,.about-teaser .eyebrow,.home-cta .eyebrow{font-size:.68rem;line-height:1.5}
+ .hero-description,.section-description,.teaser-copy,.home-cta>p:not(.eyebrow){font-size:.9rem;line-height:1.75}
+ .intro-strip{font-size:.72rem;line-height:1.6}
+ .category-card .category-copy p{font-size:.62rem;line-height:1.5}
+ .category-card .category-description{font-size:.76rem;line-height:1.6}
+ .category-card .category-arrow{font-size:.74rem}
+ .films-heading .eyebrow,.film-index{font-size:.62rem}
+ .films-more{font-size:.82rem}
+ .film-caption h3{font-size:1.12rem;line-height:1.3}
+ .hero-actions .button,.hero-actions .text-link{font-size:.82rem}
+}
+@media(max-width:390px){
+ .hero-description{font-size:.86rem;line-height:1.7}
+ .category-card .category-copy p{font-size:.58rem}
+ .category-card .category-description{font-size:.72rem}
+ .intro-strip{font-size:.68rem}
+}
