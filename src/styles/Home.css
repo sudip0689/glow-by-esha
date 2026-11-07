@@ -318,3 +318,7 @@
  .about-teaser{padding-top:48px;padding-bottom:48px}
  .home-cta{padding-top:52px;padding-bottom:52px}
 }
+
+/* Final featured bridal portrait: show the selected real photograph */
+.home-hero-photo{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 32%}
+@media(max-width:800px){.hero-art{max-width:460px}.home-hero-photo{aspect-ratio:4/5;object-position:center 30%}}
