@@ -26,12 +26,17 @@ function Home() {
           </div>
           <div className="hero-note"><span className="note-line" /> A beauty portfolio by Glow By Esha</div>
         </div>
-        <div className="hero-art" aria-label="Portfolio photo area">
-          <div className="hero-frame">
-            {homePhotos.red[0] ? <img className="home-hero-photo" src={homePhotos.red[0]} alt="Featured bridal makeup by Glow By Esha" /> : <div className="photo-placeholder"><span>GLOW BY ESHA</span><small>Bridal artistry · Personal expression</small></div>}
-            <div className="frame-caption"><span>THE ART OF THE GLOW</span><span>01 / 01</span></div>
+        <div className="hero-art hero-editorial" aria-label="Featured bridal portfolio">
+          <div className="editorial-main">
+            {homePhotos.red[0] ? <img className="home-hero-photo" src={homePhotos.red[0]} alt="Red bridal makeup look by Glow By Esha" /> : <div className="photo-placeholder"><span>GLOW BY ESHA</span><small>Bridal artistry · Personal expression</small></div>}
+            <div className="editorial-photo-label"><span>01</span><span>THE RED BRIDAL LOOK</span></div>
           </div>
-          <span className="hero-stamp">GLOW<br />BY ESHA</span>
+          <div className="editorial-side">
+            {homePhotos.white[0] ? <img src={homePhotos.white[0]} alt="Traditional Bengali bridal makeup by Glow By Esha" /> : <div className="editorial-side-placeholder">E.</div>}
+            <div className="editorial-side-caption"><span>02 / BENGALI BRIDAL</span><span>Beauty rooted in tradition</span></div>
+            <span className="editorial-seal">GLOW<br/>BY ESHA</span>
+          </div>
+          <div className="editorial-footnote">A PORTFOLIO OF BRIDAL STORIES <span>EST. WITH CARE</span></div>
         </div>
       </section>
 
