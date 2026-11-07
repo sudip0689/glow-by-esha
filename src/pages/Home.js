@@ -5,13 +5,15 @@ import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 
 function Home() {
   const [homePhotos, setHomePhotos] = useState({ red: [], white: [] });
+  const [photosLoaded, setPhotosLoaded] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
+  const heroPhoto = homePhotos.red.find(url => /DSC00616\\.JPG/i.test(decodeURIComponent(url))) || homePhotos.red[0];
   useEffect(() => {
     let active = true;
     Promise.all(['person-1-red', 'person-2-white'].map(async folder => {
       const { data } = await supabase.storage.from(PHOTO_BUCKET).list(folder, { limit: 20, sortBy: { column: 'name', order: 'asc' } });
       return (data || []).filter(item => item.name && !item.name.startsWith('.')).map(item => supabase.storage.from(PHOTO_BUCKET).getPublicUrl(folder + '/' + item.name).data.publicUrl);
-    })).then(([red, white]) => { if (active) setHomePhotos({ red, white }); });
+    })).then(([red, white]) => { if (active) setHomePhotos({ red, white }); }).catch(() => { if (active) setHomePhotos({ red: [], white: [] }); }).finally(() => { if (active) setPhotosLoaded(true); });
     return () => { active = false; };
   }, []);
   return (
