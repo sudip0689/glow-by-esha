@@ -69,17 +69,11 @@ function Home() {
         </div>
         <div className="films-grid">
           <article className="film-card">
-            <a className="film-video-wrap" href="https://youtube.com/shorts/dZkeBs8gInM" target="_blank" rel="noreferrer" aria-label="Watch The Bengali Bride video on YouTube">
-              <img src="https://img.youtube.com/vi/dZkeBs8gInM/hqdefault.jpg" alt="Traditional Bengali bridal makeup video preview" loading="lazy" />
-              <span className="film-play">▶</span>
-            </a>
+            <div className="film-video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/dZkeBs8gInM?playsinline=1&rel=0" title="The Bengali Bride — Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></div>
             <div className="film-caption"><span className="film-index">01 / BRIDAL</span><h3>The Bengali bride</h3></div>
           </article>
           <article className="film-card">
-            <a className="film-video-wrap" href="https://youtube.com/shorts/LG1z4GUeZBI" target="_blank" rel="noreferrer" aria-label="Watch The Elegant Bride video on YouTube">
-              <img src="https://img.youtube.com/vi/LG1z4GUeZBI/hqdefault.jpg" alt="Elegant bridal makeup video preview" loading="lazy" />
-              <span className="film-play">▶</span>
-            </a>
+            <div className="film-video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/LG1z4GUeZBI?playsinline=1&rel=0" title="The Elegant Bride — Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></div>
             <div className="film-caption"><span className="film-index">02 / BRIDAL</span><h3>The elegant bride</h3></div>
           </article>
         </div>
