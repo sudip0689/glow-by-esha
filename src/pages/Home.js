@@ -19,12 +19,12 @@ function Home() {
         <div className="hero-copy">
           <p className="eyebrow">MAKEUP • BEAUTY • CONFIDENCE</p>
           <h1>Beauty, with<br /><em>a personal touch.</em></h1>
-          <p className="hero-description">Thoughtful makeup artistry for your most meaningful moments. Explore the work, discover the details, and find your look.</p>
+          <p className="hero-description">আপনার বিশেষ মুহূর্তের জন্য যত্ন, দক্ষতা ও আপনার নিজস্ব সৌন্দর্যকে গুরুত্ব দিয়ে তৈরি Makeup Artistry।</p>
           <div className="hero-actions">
             <Link to="/portfolio" className="button button-dark">Explore the portfolio <span>↗</span></Link>
             <Link to="/about" className="text-link">Meet Esha</Link>
           </div>
-          <div className="hero-note"><span className="note-line" /> A beauty portfolio by Glow By Esha</div>
+          <div className="hero-note"><span className="note-line" /> আপনার সৌন্দর্য, আপনার নিজস্ব স্টাইল</div>
         </div>
         <div className="hero-art" aria-label="Portfolio photo area">
           <div className="hero-frame">
@@ -37,23 +37,23 @@ function Home() {
 
       <section className="intro-strip">
         <p>MAKEUP THAT FEELS LIKE YOU</p>
-        <span>Personalised looks · Thoughtful details · Timeless beauty</span>
+        <span>আপনার পছন্দ · যত্নশীল কাজ · চিরন্তন সৌন্দর্য</span>
       </section>
 
       <section className="home-section">
         <div className="section-heading">
-          <div><p className="eyebrow">THE PORTFOLIO</p><h2>Every look tells<br /><em>its own story.</em></h2></div>
+          <div><p className="eyebrow">THE PORTFOLIO</p><h2>Every look tells<br /><em>its own story.</em></h2><p className="section-description">প্রতিটি সাজের রয়েছে নিজস্ব গল্প। আমাদের কাজের কিছু মুহূর্ত দেখে নিন।</p></div>
           <Link to="/portfolio" className="text-link">View all work ↗</Link>
         </div>
         <div className="category-grid">
           <Link to="/portfolio" className="category-card category-bridal" style={homePhotos.red[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.red[0] + ")" } : {}}>
             <span className="category-number">01 <small> / 10 LOOKS</small></span>
-            <div className="category-copy"><p>THE RED BRIDAL COLLECTION</p><h3>Red Bridal<br /><em>Looks</em></h3><span className="category-description">Timeless details. A statement of tradition.</span></div>
+            <div className="category-copy"><p>THE RED BRIDAL COLLECTION</p><h3>Red Bridal<br /><em>Looks</em></h3><span className="category-description">লাল বেনারসিতে ঐতিহ্য আর আভিজাত্যের ছোঁয়া।</span></div>
             <span className="category-arrow">Explore collection ↗</span>
           </Link>
           <Link to="/portfolio" className="category-card category-party" style={homePhotos.white[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.white[0] + ")" } : {}}>
             <span className="category-number">02 <small> / 05 LOOKS</small></span>
-            <div className="category-copy"><p>THE BENGALI BRIDAL COLLECTION</p><h3>White & Red<br /><em>Bengali Bride</em></h3><span className="category-description">Classic elegance, rooted in tradition.</span></div>
+            <div className="category-copy"><p>THE BENGALI BRIDAL COLLECTION</p><h3>White & Red<br /><em>Bengali Bride</em></h3><span className="category-description">বাংলার চিরাচরিত সাজ, নতুন করে ভালোবাসার ছোঁয়ায়।</span></div>
             <span className="category-arrow">Explore collection ↗</span>
           </Link>
         </div>
@@ -64,6 +64,7 @@ function Home() {
           <div>
             <p className="eyebrow">A CLOSER LOOK</p>
             <h2 id="bridal-films-title">Watch the <em>looks.</em></h2>
+            <p className="section-description">ভিডিওতে দেখে নিন সাজের আরও কিছু খুঁটিনাটি।</p>
           </div>
           <Link to="/portfolio" className="films-more">Explore all work ↗</Link>
         </div>
@@ -81,10 +82,10 @@ function Home() {
 
       <section className="about-teaser">
         <div className="about-teaser-mark">E.</div>
-        <div><p className="eyebrow">A LITTLE ABOUT THE ARTIST</p><h2>It should still<br /><em>feel like you.</em></h2><p className="teaser-copy">A good makeup look doesn't hide who you are. It brings your favourite features forward and helps you feel at ease in your own skin.</p><Link to="/about" className="text-link">Get to know Esha ↗</Link></div>
+        <div><p className="eyebrow">A LITTLE ABOUT THE ARTIST</p><h2>It should still<br /><em>feel like you.</em></h2><p className="teaser-copy">সাজের পরেও আপনার নিজস্বতা যেন অটুট থাকে। আপনার পছন্দ ও ব্যক্তিত্বকে গুরুত্ব দিয়েই প্রতিটি লুক তৈরি করা হয়।</p><Link to="/about" className="text-link">Get to know Esha ↗</Link></div>
       </section>
 
-      <section className="home-cta"><p className="eyebrow">YOUR MOMENT, YOUR LOOK</p><h2>Let's create something<br /><em>beautiful.</em></h2><Link to="/contact" className="button button-light">Get in touch <span>↗</span></Link></section>
+      <section className="home-cta"><p className="eyebrow">YOUR MOMENT, YOUR LOOK</p><h2>Let's create something<br /><em>beautiful.</em></h2><p>আপনার বিশেষ দিনের সাজ নিয়ে কথা বলতে যোগাযোগ করুন।</p><Link to="/contact" className="button button-light">Get in touch <span>↗</span></Link></section>
     </main>
   );
 }
