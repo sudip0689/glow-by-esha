@@ -12,3 +12,17 @@
 .about-values{display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:23px;margin-top:26px}
 .about-values span{font-size:.58rem;letter-spacing:.12em;color:var(--gold);border:1px solid var(--line);padding:8px 10px}
 @media(max-width:760px){.about-page{padding:58px 6vw 70px}.about-layout{grid-template-columns:1fr;gap:38px}.about-photo{min-height:370px}.simple-page-head{margin-bottom:38px}}
+
+
+/* Clear route back to the homepage and tighter mobile page entrance */
+.about-home-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:10px 0;border-bottom:1px solid var(--gold);font-size:.72rem;letter-spacing:.08em;color:var(--ink);transition:color .2s}
+.about-home-link:hover{color:var(--gold)}
+@media(max-width:760px){
+  .about-page{padding-top:34px;padding-bottom:54px}
+  .simple-page-head{margin-bottom:26px}
+  .simple-page-head h1{font-size:clamp(3rem,12vw,4.2rem);margin:12px 0}
+  .simple-page-head>p:last-of-type{font-size:.88rem;line-height:1.65}
+  .about-home-link{margin-top:16px}
+  .about-layout{gap:28px}
+  .about-photo{min-height:290px}
+}
