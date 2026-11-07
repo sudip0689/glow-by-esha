@@ -5,6 +5,7 @@ import '../styles/About.css';
 
 function About() {
   const [portrait, setPortrait] = useState('');
+  const [previewOpen, setPreviewOpen] = useState(false);
   useEffect(() => {
     let active = true;
     supabase.storage.from(PHOTO_BUCKET).list('other-photos', {
@@ -31,9 +32,10 @@ function About() {
           <Link className="about-home-link" to="/">← Back to Home</Link>
         </div>
         <div className="about-hero-art" aria-label="Portrait of Esha">
-          {portrait ? <img src={portrait} alt="Esha by the riverside" /> : <div className="about-photo-empty"><span>ESHA'S PORTRAIT</span><small>Upload the portrait to Other Photos in Admin</small></div>}
+          {portrait ? <button type="button" className="about-photo-preview" onClick={() => setPreviewOpen(true)} aria-label="View Esha portrait full screen"><img src={portrait} alt="Esha by the riverside" /></button> : <div className="about-photo-empty"><span>ESHA'S PORTRAIT</span><small>Upload the portrait to Other Photos in Admin</small></div>}
         </div>
       </section>
+      {previewOpen && <div className="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" onClick={() => setPreviewOpen(false)}><button type="button" className="lightbox-close" onClick={() => setPreviewOpen(false)} aria-label="Close preview">×</button><img src={portrait} alt="Esha by the riverside" onClick={event => event.stopPropagation()} /></div>}
       <section className="about-story">
         <p className="eyebrow">A NOTE FROM ESHA</p>
         <h2>Makeup should highlight you,<br /><em>not hide you.</em></h2>
