@@ -49,12 +49,12 @@ function Home() {
           <Link to="/portfolio" className="text-link">View all work ↗</Link>
         </div>
         <div className="category-grid">
-          <Link to="/portfolio" className="category-card category-bridal" style={homePhotos.red[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.red[0] + ")" } : {}}>
+          <Link to="/portfolio#person-one" className="category-card category-bridal" style={homePhotos.red[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.red[0] + ")" } : {}}>
             <span className="category-number">01 <small> / 10 LOOKS</small></span>
             <div className="category-copy"><p>THE MUSLIM BRIDAL COLLECTION</p><h3>Muslim Bridal<br /><em>Look</em></h3><span className="category-description">আভিজাত্য, নিখুঁত ডিটেলিং ও ব্যক্তিত্বের ছোঁয়া।</span></div>
             <span className="category-arrow">Explore collection ↗</span>
           </Link>
-          <Link to="/portfolio" className="category-card category-party" style={homePhotos.white[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.white[0] + ")" } : {}}>
+          <Link to="/portfolio#person-two" className="category-card category-party" style={homePhotos.white[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.white[0] + ")" } : {}}>
             <span className="category-number">02 <small> / 05 LOOKS</small></span>
             <div className="category-copy"><p>THE BRIDDHI COLLECTION</p><h3>Briddhi<br /><em>Look</em></h3><span className="category-description">ঐতিহ্য আর আধুনিকতার মেলবন্ধনে এক অনন্য সাজ।</span></div>
             <span className="category-arrow">Explore collection ↗</span>
