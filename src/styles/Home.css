@@ -35,3 +35,21 @@
 .home-cta .eyebrow{color:#f3e8d6}.home-cta h2{font-size:clamp(2.8rem,5vw,4.7rem);margin:16px 0 28px;color:#fffdf9}
 @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:58px;gap:42px}.hero-art{max-width:560px;width:100%;margin:auto}.photo-placeholder{min-height:350px}.hero-note{margin-top:42px}.category-grid{grid-template-columns:1fr}.category-card{min-height:230px}.about-teaser{grid-template-columns:1fr;padding:65px 8vw;text-align:center}.about-teaser-mark{width:120px;height:120px;font-size:3.8rem}.teaser-copy{margin:18px auto 24px}.section-heading{align-items:flex-start;flex-direction:column}.home-section{padding:70px 6vw}}
 @media(max-width:480px){.hero-copy h1{font-size:3.2rem}.photo-placeholder{min-height:280px}.intro-strip{gap:8px;flex-direction:column;align-items:center}.hero-stamp{width:78px;height:78px;font-size:.7rem}}
+
+.bridal-films{background:#351d22;color:#fbf5ed;padding:clamp(66px,9vw,116px) max(6vw,calc((100vw - 1280px)/2));}
+.films-heading{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:42px}
+.films-heading .eyebrow{color:#d5b98e}
+.films-heading h2{font-family:'Playfair Display',serif;font-size:clamp(3rem,6vw,5.4rem);line-height:1.02;font-weight:500;letter-spacing:-.04em;margin:14px 0}
+.films-heading h2 em{color:#d5b98e;font-weight:500}
+.films-intro{color:#d7c8c0;font-size:.92rem;line-height:1.8}
+.films-edition{font-size:.59rem;line-height:1.9;letter-spacing:.17em;text-align:right;color:#d5b98e;white-space:nowrap}
+.films-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,5vw,70px);align-items:start;max-width:1000px;margin:auto}
+.film-card{min-width:0}
+.film-card-offset{margin-top:72px}
+.film-video-wrap{width:100%;max-width:390px;margin:auto;aspect-ratio:9/16;background:#211317;overflow:hidden;border:1px solid rgba(213,185,142,.48);box-shadow:14px 14px 0 rgba(213,185,142,.12)}
+.film-video-wrap iframe{width:100%;height:100%;border:0;display:block}
+.film-caption{padding:20px 2px 0;max-width:390px;margin:auto}
+.film-index{font-size:.58rem;letter-spacing:.18em;color:#d5b98e}
+.film-caption h3{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.25rem);font-weight:500;margin:8px 0 3px}
+.film-caption p{font-size:.72rem;letter-spacing:.08em;color:#d7c8c0}
+@media(max-width:700px){.bridal-films{padding:68px 6vw}.films-heading{align-items:flex-start;flex-direction:column;margin-bottom:30px}.films-edition{text-align:left}.films-grid{grid-template-columns:1fr;gap:42px}.film-card-offset{margin-top:0}.film-video-wrap{max-width:min(100%,360px)}}
