@@ -10,6 +10,7 @@ const collections = [
 
 function Portfolio() {
   const [gallery, setGallery] = useState({});
+  const [preview, setPreview] = useState(null);
   const location = useLocation();
   useEffect(() => {
     if (!location.hash) return;
@@ -53,7 +54,7 @@ function Portfolio() {
               {photos.map((photo, index) => (
                 <article className={'portfolio-tile bridal-tile ' + (index === 0 ? 'bridal-tile-feature' : '')} key={photo.name}>
                   <div className="bridal-image-wrap">
-                    <img src={photo.url} alt={collection.title + ' makeup by Glow By Esha'} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+                    <button type="button" className="gallery-image-button" onClick={() => setPreview({ src: photo.url, alt: collection.title + ' makeup by Glow By Esha' })} aria-label="View photograph full screen"><img src={photo.url} alt={collection.title + ' makeup by Glow By Esha'} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" /><span className="image-zoom-hint">View photo ↗</span></button>
                     <span className="image-number">{String(index + 1).padStart(2, '0')}</span>
                   </div>
                   <div className="tile-meta">
@@ -67,6 +68,7 @@ function Portfolio() {
           </section>
         );
       })}
+      {preview && <div className="photo-lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" onClick={() => setPreview(null)}><button type="button" className="lightbox-close" onClick={() => setPreview(null)} aria-label="Close preview">×</button><img src={preview.src} alt={preview.alt} onClick={event => event.stopPropagation()} /></div>}
       <footer className="portfolio-endnote"><span>MADE WITH CARE · GLOW BY ESHA</span><p>যত্নে তৈরি প্রতিটি সাজ, আপনার গল্পেরই একটি অংশ।</p></footer>
     </main>
   );
