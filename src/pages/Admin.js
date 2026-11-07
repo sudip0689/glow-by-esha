@@ -79,6 +79,18 @@ function Admin() {
     setLoading(false);
   };
 
+  const setMeetEshaPortrait = async (name) => {
+    setLoading(true); setMessage('');
+    const imagePath = folder + '/' + name;
+    const { error } = await supabase.from('site_settings').upsert({
+      key: 'meet_esha_portrait_path',
+      value: imagePath,
+      updated_at: new Date().toISOString()
+    }, { onConflict: 'key' });
+    setMessage(error ? 'Could not save Meet Esha photo: ' + error.message : 'Meet Esha portrait updated successfully.');
+    setLoading(false);
+  };
+
   const removePhoto = async (name) => {
     if (!window.confirm('Delete this photo permanently?')) return;
     setLoading(true);
@@ -132,6 +144,7 @@ function Admin() {
             <article className="admin-photo" key={photo.name}>
               <img src={photo.url} alt={photo.name} />
               <p title={photo.name}>{photo.name.replace(/^\d+-/, '')}</p>
+              <button type="button" onClick={() => setMeetEshaPortrait(photo.name)} disabled={loading}>Use for Meet Esha</button>
               <button onClick={() => removePhoto(photo.name)}>Delete photo</button>
             </article>
           ))}</div>
