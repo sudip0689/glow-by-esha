@@ -409,3 +409,20 @@
  .hero-description{font-size:.78rem}
  .hero-actions .button{font-size:.72rem;padding:13px 14px}
 }
+
+
+/* Improve text contrast in the mobile split hero */
+@media(max-width:800px){
+ .hero-art{width:72%}
+ .hero-art::before{
+   background:linear-gradient(90deg,
+     var(--paper) 0%,
+     rgba(248,245,239,.99) 22%,
+     rgba(248,245,239,.94) 38%,
+     rgba(248,245,239,.68) 53%,
+     rgba(248,245,239,.12) 78%,
+     rgba(248,245,239,0) 100%);
+ }
+ .hero-copy{width:61%;max-width:360px}
+ .hero-copy h1,.hero-description,.hero-copy .eyebrow{ text-shadow:0 1px 8px rgba(248,245,239,.35)}
+}
