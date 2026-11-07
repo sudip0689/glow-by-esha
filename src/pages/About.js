@@ -30,7 +30,7 @@ function About() {
           <p className="about-hero-description">A personal approach to makeup, beauty and self-expression.</p>
           <Link className="about-home-link" to="/">← Back to Home</Link>
         </div>
-        <div className="about-photo">
+        <div className="about-hero-art" aria-label="Portrait of Esha">
           {portrait ? <img src={portrait} alt="Esha by the riverside" /> : <div className="about-photo-empty"><span>ESHA'S PORTRAIT</span><small>Upload the portrait to Other Photos in Admin</small></div>}
         </div>
       </section>
