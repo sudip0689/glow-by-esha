@@ -25,31 +25,6 @@ function Home() {
         </div>
       </section>
 
-      <section className="bridal-films" aria-labelledby="bridal-films-title">
-        <div className="films-heading">
-          <div>
-            <p className="eyebrow">BEHIND EVERY BEAUTIFUL LOOK</p>
-            <h2 id="bridal-films-title">Bridal <em>films.</em></h2>
-            <p className="films-intro">A closer look at the details, the artistry and the final glow.</p>
-          </div>
-          <span className="films-edition">GLOW BY ESHA<br />MOVING PORTRAITS · 01—02</span>
-        </div>
-        <div className="films-grid">
-          <article className="film-card">
-            <div className="film-video-wrap">
-              <iframe src="https://www.youtube-nocookie.com/embed/dZkeBs8gInM?rel=0" title="Traditional Bengali Bridal look by Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
-            </div>
-            <div className="film-caption"><span className="film-index">01 / BRIDAL FILM</span><h3>The Bengali bride</h3><p>Traditional · Timeless · Beautiful</p></div>
-          </article>
-          <article className="film-card film-card-offset">
-            <div className="film-video-wrap">
-              <iframe src="https://www.youtube-nocookie.com/embed/LG1z4GUeZBI?rel=0" title="Elegant Bridal Look by Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
-            </div>
-            <div className="film-caption"><span className="film-index">02 / BRIDAL FILM</span><h3>The elegant bride</h3><p>Soft radiance · Golden details</p></div>
-          </article>
-        </div>
-      </section>
-
       <section className="intro-strip">
         <p>MAKEUP THAT FEELS LIKE YOU</p>
         <span>Personalised looks · Thoughtful details · Timeless beauty</span>
@@ -64,6 +39,32 @@ function Home() {
           <Link to="/portfolio" className="category-card category-bridal"><span className="category-number">01</span><div><p>THE CELEBRATION</p><h3>Bridal looks</h3></div><span className="category-arrow">↗</span></Link>
           <Link to="/portfolio" className="category-card category-party"><span className="category-number">02</span><div><p>THE OCCASION</p><h3>Party & event</h3></div><span className="category-arrow">↗</span></Link>
           <Link to="/portfolio" className="category-card category-natural"><span className="category-number">03</span><div><p>THE EVERYDAY</p><h3>Soft glam</h3></div><span className="category-arrow">↗</span></Link>
+        </div>
+      </section>
+
+      <section className="bridal-films" aria-labelledby="bridal-films-title">
+        <div className="films-heading">
+          <div>
+            <p className="eyebrow">A CLOSER LOOK</p>
+            <h2 id="bridal-films-title">Watch the <em>looks.</em></h2>
+          </div>
+          <Link to="/portfolio" className="films-more">Explore all work ↗</Link>
+        </div>
+        <div className="films-grid">
+          <article className="film-card">
+            <a className="film-video-wrap" href="https://youtube.com/shorts/dZkeBs8gInM" target="_blank" rel="noreferrer" aria-label="Watch The Bengali Bride video on YouTube">
+              <img src="https://img.youtube.com/vi/dZkeBs8gInM/hqdefault.jpg" alt="Traditional Bengali bridal makeup video preview" loading="lazy" />
+              <span className="film-play">▶</span>
+            </a>
+            <div className="film-caption"><span className="film-index">01 / BRIDAL</span><h3>The Bengali bride</h3></div>
+          </article>
+          <article className="film-card">
+            <a className="film-video-wrap" href="https://youtube.com/shorts/LG1z4GUeZBI" target="_blank" rel="noreferrer" aria-label="Watch The Elegant Bride video on YouTube">
+              <img src="https://img.youtube.com/vi/LG1z4GUeZBI/hqdefault.jpg" alt="Elegant bridal makeup video preview" loading="lazy" />
+              <span className="film-play">▶</span>
+            </a>
+            <div className="film-caption"><span className="film-index">02 / BRIDAL</span><h3>The elegant bride</h3></div>
+          </article>
         </div>
       </section>
 
