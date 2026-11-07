@@ -11,3 +11,14 @@
 .contact-side p{font-size:.68rem;letter-spacing:.2em;font-weight:700;margin-top:14px}
 .contact-side small{font-size:.55rem;letter-spacing:.25em;margin-top:5px}
 @media(max-width:760px){.contact-page{grid-template-columns:1fr;padding:60px 6vw 75px;gap:42px}.contact-side{height:230px}.contact-monogram{font-size:5rem}}
+
+/* Match Contact page type scale and spacing */
+.contact-page{max-width:1180px;padding:64px 6vw 76px;gap:7vw}
+.contact-panel h1{font-size:clamp(2.8rem,5.5vw,4.8rem)}
+.contact-lead{font-size:.9rem;line-height:1.75}
+@media(max-width:760px){
+ .contact-page{padding:38px 5vw 52px;gap:30px;min-height:0}
+ .contact-panel h1{font-size:clamp(2.65rem,10vw,3.5rem)}
+ .contact-lead{font-size:.84rem;line-height:1.7;margin-bottom:26px}
+ .contact-side{height:200px}
+}
