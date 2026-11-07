@@ -7,22 +7,28 @@ import Portfolio from './pages/Portfolio';
 import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import Admin from './pages/Admin';
 import './styles/App.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/admin" element={<Admin />} />
+        <Route path="*" element={
+          <div className="App">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+            <Footer />
+          </div>
+        } />
+      </Routes>
     </Router>
   );
 }
