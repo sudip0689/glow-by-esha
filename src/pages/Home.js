@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Home.css';
+import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 
 function Home() {
+  const [homePhotos, setHomePhotos] = useState({ red: [], white: [] });
+  useEffect(() => {
+    let active = true;
+    Promise.all(['person-1-red', 'person-2-white'].map(async folder => {
+      const { data } = await supabase.storage.from(PHOTO_BUCKET).list(folder, { limit: 20, sortBy: { column: 'name', order: 'asc' } });
+      return (data || []).filter(item => item.name && !item.name.startsWith('.')).map(item => supabase.storage.from(PHOTO_BUCKET).getPublicUrl(folder + '/' + item.name).data.publicUrl);
+    })).then(([red, white]) => { if (active) setHomePhotos({ red, white }); });
+    return () => { active = false; };
+  }, []);
   return (
     <main className="home">
       <section className="hero">
@@ -18,7 +28,7 @@ function Home() {
         </div>
         <div className="hero-art" aria-label="Portfolio photo area">
           <div className="hero-frame">
-            <div className="photo-placeholder"><span>YOUR FEATURED MAKEUP PHOTO</span><small>Add Esha's real work here</small></div>
+            {homePhotos.red[0] ? <img className="home-hero-photo" src={homePhotos.red[0]} alt="Featured bridal makeup by Glow By Esha" /> : <div className="photo-placeholder"><span>GLOW BY ESHA</span><small>Bridal artistry · Personal expression</small></div>}
             <div className="frame-caption"><span>THE ART OF THE GLOW</span><span>01 / 01</span></div>
           </div>
           <span className="hero-stamp">GLOW<br />BY ESHA</span>
@@ -36,9 +46,9 @@ function Home() {
           <Link to="/portfolio" className="text-link">View all work ↗</Link>
         </div>
         <div className="category-grid">
-          <Link to="/portfolio" className="category-card category-bridal"><span className="category-number">01</span><div><p>THE CELEBRATION</p><h3>Bridal looks</h3></div><span className="category-arrow">↗</span></Link>
-          <Link to="/portfolio" className="category-card category-party"><span className="category-number">02</span><div><p>THE OCCASION</p><h3>Party & event</h3></div><span className="category-arrow">↗</span></Link>
-          <Link to="/portfolio" className="category-card category-natural"><span className="category-number">03</span><div><p>THE EVERYDAY</p><h3>Soft glam</h3></div><span className="category-arrow">↗</span></Link>
+          <Link to="/portfolio" className="category-card category-bridal" style={homePhotos.red[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.04),rgba(25,16,15,.76)),url(" + homePhotos.red[0] + ")" } : {}}><span className="category-number">01</span><div><p>THE CELEBRATION</p><h3>Bridal looks</h3></div><span className="category-arrow">↗</span></Link>
+          <Link to="/portfolio" className="category-card category-party" style={homePhotos.white[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.04),rgba(25,16,15,.76)),url(" + homePhotos.white[0] + ")" } : {}}><span className="category-number">02</span><div><p>THE OCCASION</p><h3>Party & event</h3></div><span className="category-arrow">↗</span></Link>
+          <Link to="/portfolio" className="category-card category-natural" style={homePhotos.red[1] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.04),rgba(25,16,15,.76)),url(" + homePhotos.red[1] + ")" } : {}}><span className="category-number">03</span><div><p>THE EVERYDAY</p><h3>Soft glam</h3></div><span className="category-arrow">↗</span></Link>
         </div>
       </section>
 
