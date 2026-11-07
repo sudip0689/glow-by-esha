@@ -4,7 +4,9 @@ import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 import '../styles/About.css';
 
 function About() {
-  const [portrait, setPortrait] = useState('');
+  const fallbackPath = 'other-photos/1794040367441-760145.jpg';
+  const fallbackUrl = supabase.storage.from(PHOTO_BUCKET).getPublicUrl(fallbackPath).data.publicUrl;
+  const [portrait, setPortrait] = useState(fallbackUrl);
   const [previewOpen, setPreviewOpen] = useState(false);
   useEffect(() => {
     let active = true;
@@ -16,7 +18,7 @@ function About() {
         .maybeSingle();
       if (error || !data?.value) return;
       const { data: image } = supabase.storage.from(PHOTO_BUCKET).getPublicUrl(data.value);
-      if (active) setPortrait(image.publicUrl);
+      if (active && image?.publicUrl) setPortrait(image.publicUrl);
     };
     loadPortrait();
     return () => { active = false; };
