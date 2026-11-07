@@ -89,3 +89,20 @@
   .film-index{font-size:.49rem;letter-spacing:.12em}
   .film-caption h3{font-size:clamp(.94rem,4vw,1.15rem);line-height:1.2}
 }
+
+/* Mobile alignment refinement for the film section */
+@media(max-width:700px){
+  .bridal-films .films-heading{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    text-align:left;
+    gap:10px;
+    width:100%;
+  }
+  .bridal-films .films-heading > div{width:100%;text-align:left}
+  .bridal-films .films-heading h2{ text-align:left; }
+  .bridal-films .films-more{align-self:flex-start;margin-top:0}
+  .bridal-films{padding-bottom:42px}
+}
