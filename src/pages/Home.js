@@ -48,12 +48,12 @@ function Home() {
         <div className="category-grid">
           <Link to="/portfolio" className="category-card category-bridal" style={homePhotos.red[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.red[0] + ")" } : {}}>
             <span className="category-number">01 <small> / 10 LOOKS</small></span>
-            <div className="category-copy"><p>THE RED BRIDAL COLLECTION</p><h3>Red Bridal<br /><em>Looks</em></h3><span className="category-description">লাল বেনারসিতে ঐতিহ্য আর আভিজাত্যের ছোঁয়া।</span></div>
+            <div className="category-copy"><p>THE RED BRIDAL COLLECTION</p><h3>Red Bridal<br /><em>Looks</em></h3><span className="category-description">A timeless bridal look, finished with refined details and radiant warmth.</span></div>
             <span className="category-arrow">Explore collection ↗</span>
           </Link>
           <Link to="/portfolio" className="category-card category-party" style={homePhotos.white[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.white[0] + ")" } : {}}>
             <span className="category-number">02 <small> / 05 LOOKS</small></span>
-            <div className="category-copy"><p>THE BENGALI BRIDAL COLLECTION</p><h3>White & Red<br /><em>Bengali Bride</em></h3><span className="category-description">বাংলার চিরাচরিত সাজ, নতুন করে ভালোবাসার ছোঁয়ায়।</span></div>
+            <div className="category-copy"><p>THE BENGALI BRIDAL COLLECTION</p><h3>White & Red<br /><em>Bengali Bride</em></h3><span className="category-description">Classic Bengali bridal elegance, thoughtfully brought to life.</span></div>
             <span className="category-arrow">Explore collection ↗</span>
           </Link>
         </div>
