@@ -96,3 +96,16 @@
  .collection-gallery{gap:18px 9px}
  .collection-gallery .tile-meta h3{font-size:.82rem}
 }
+
+/* Consistent portfolio typography and page rhythm */
+.bridal-portfolio{max-width:1180px;padding:64px 6vw 76px}
+.bridal-portfolio .portfolio-intro h1{font-size:clamp(2.8rem,5.5vw,4.8rem)}
+.collection-heading h2{font-size:clamp(2.15rem,4vw,3.35rem)}
+.collection-heading>p:last-child{font-size:.9rem;line-height:1.75}
+@media(max-width:700px){
+ .bridal-portfolio{padding:38px 5vw 52px}
+ .bridal-portfolio .portfolio-intro h1{font-size:clamp(2.65rem,10vw,3.5rem)}
+ .collection-heading h2{font-size:clamp(1.9rem,7.8vw,2.55rem)}
+ .collection-heading>p:last-child{font-size:.82rem;line-height:1.65}
+ .bridal-collection{padding:24px 0 38px}
+}
