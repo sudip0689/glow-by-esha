@@ -22,3 +22,23 @@
  .contact-lead{font-size:.84rem;line-height:1.7;margin-bottom:26px}
  .contact-side{height:200px}
 }
+
+
+/* WhatsApp booking enquiry form */
+.booking-form{max-width:590px;display:grid;grid-template-columns:1fr 1fr;gap:16px 14px;margin:30px 0 22px}
+.booking-form label{display:flex;flex-direction:column;gap:7px;color:var(--ink);font-size:.72rem;font-weight:600;letter-spacing:.02em}
+.booking-form label:nth-last-of-type(1),.booking-form label:nth-last-of-type(2){grid-column:1/-1}
+.booking-form input,.booking-form select,.booking-form textarea{width:100%;min-width:0;border:1px solid var(--line);border-radius:2px;background:#fffdf9;color:var(--ink);padding:12px 13px;font:400 .82rem inherit;outline:none}
+.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 2px rgba(177,141,92,.12)}
+.booking-form textarea{resize:vertical;line-height:1.5}
+.booking-error{color:#a43e36;font-size:.68rem;font-weight:400}
+.booking-submit{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:15px 18px;border:0;background:#236b45;color:white;font-size:.82rem;font-weight:700;cursor:pointer;min-height:50px}
+.booking-submit:hover{background:#1b5638}
+.booking-privacy{grid-column:1/-1;margin:0;color:var(--muted);font-size:.68rem;line-height:1.6}
+@media(max-width:760px){
+ .booking-form{grid-template-columns:1fr;gap:13px;margin:24px 0 18px}
+ .booking-form label:nth-last-of-type(1),.booking-form label:nth-last-of-type(2){grid-column:auto}
+ .booking-form input,.booking-form select,.booking-form textarea{padding:12px;font-size:16px}
+ .booking-submit{grid-column:auto;min-height:50px}
+ .booking-privacy{grid-column:auto}
+}
