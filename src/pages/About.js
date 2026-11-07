@@ -27,7 +27,7 @@ function About() {
         <div className="about-hero-copy">
           <p className="eyebrow">THE ARTIST · GLOW BY ESHA</p>
           <h1>Meet <em>Esha.</em></h1>
-          <p className="about-hero-description">A personal approach to makeup, beauty and self-expression.</p>
+          <p className="about-hero-description">সৌন্দর্য, সাজ ও আত্মপ্রকাশের এক ব্যক্তিগত যাত্রা। প্রতিটি লুকে আপনার নিজস্বতাই থাকুক সবার আগে।</p>
           <Link className="about-home-link" to="/">← Back to Home</Link>
         </div>
         <div className="about-hero-art" aria-label="Portrait of Esha">
@@ -38,8 +38,8 @@ function About() {
         <p className="eyebrow">A NOTE FROM ESHA</p>
         <h2>Makeup should highlight you,<br /><em>not hide you.</em></h2>
         <div className="about-story-copy">
-          <p>Glow By Esha is a space to celebrate individual beauty through thoughtful makeup artistry. The focus is on understanding each person's style, occasion and comfort, then creating a look that feels like them.</p>
-          <p>This page will be updated with Esha's personal story, training and experience once those details are confirmed.</p>
+          <p>প্রতিটি মানুষের সৌন্দর্য আলাদা। তাই Makeup হওয়া উচিত আপনার স্বাভাবিক সৌন্দর্যকে আরও সুন্দরভাবে ফুটিয়ে তোলার একটি উপায়—আপনার নিজস্বতাকে ঢেকে দেওয়ার জন্য নয়।</p>
+          <p>Glow By Esha-তে আপনার পছন্দ, অনুষ্ঠানের ধরন ও স্বাচ্ছন্দ্যকে গুরুত্ব দিয়ে সাজের পরিকল্পনা করা হয়, যাতে তৈরি হওয়া প্রতিটি লুক আপনার ব্যক্তিত্বের সঙ্গে মানানসই হয়।</p>
         </div>
         <div className="about-values"><span>PERSONAL STYLE</span><span>THOUGHTFUL DETAILS</span><span>CONFIDENT BEAUTY</span></div>
       </section>
