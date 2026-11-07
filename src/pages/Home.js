@@ -69,11 +69,11 @@ function Home() {
         </div>
         <div className="films-grid">
           <article className="film-card">
-            <div className="film-video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/dZkeBs8gInM?playsinline=1&rel=0" title="The Bengali Bride — Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></div>
+            <div className="film-video-wrap"><img src="https://img.youtube.com/vi/dZkeBs8gInM/maxresdefault.jpg" alt="The Bengali Bride video preview" loading="lazy" /></div>
             <div className="film-caption"><span className="film-index">01 / BRIDAL</span><h3>The Bengali bride</h3></div>
           </article>
           <article className="film-card">
-            <div className="film-video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/LG1z4GUeZBI?playsinline=1&rel=0" title="The Elegant Bride — Glow By Esha" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen /></div>
+            <div className="film-video-wrap"><img src="https://img.youtube.com/vi/LG1z4GUeZBI/maxresdefault.jpg" alt="The Elegant Bride video preview" loading="lazy" /></div>
             <div className="film-caption"><span className="film-index">02 / BRIDAL</span><h3>The elegant bride</h3></div>
           </article>
         </div>
