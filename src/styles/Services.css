@@ -64,3 +64,17 @@
  .service-experience{padding-top:44px}
  .services-cta>div span{font-size:.8rem}
 }
+
+ 
+/* Mobile readability: comfortable body copy and clear service details */
+@media(max-width:600px){
+ .services-page .simple-page-head>p:last-child{font-size:.92rem;line-height:1.8}
+ .services-intro-note .eyebrow,.service-tag{font-size:.72rem;line-height:1.5}
+ .services-intro-note p,.service-description{font-size:.92rem;line-height:1.8}
+ .service-includes h3{font-size:.72rem}
+ .service-includes li{font-size:.88rem;line-height:1.7}
+ .service-steps h3{font-size:1rem}
+ .service-steps p,.service-note,.services-cta>div span{font-size:.88rem;line-height:1.75}
+ .services-cta>div p{font-size:1.45rem}
+ .services-cta .button{font-size:.84rem}
+}
