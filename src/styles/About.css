@@ -1,41 +1,32 @@
-.about-page{max-width:1280px;margin:auto;padding:76px 6vw 100px}
-.simple-page-head{text-align:center;max-width:690px;margin:0 auto 54px}
-.simple-page-head h1{font-family:'Playfair Display',serif;font-size:clamp(3.2rem,6vw,5.2rem);font-weight:500;line-height:1.05;margin:17px 0}
-.simple-page-head h1 em{color:var(--gold);font-weight:500}
-.simple-page-head>p:last-child{color:var(--muted);font-size:.92rem;line-height:1.8}
-.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}
-.about-photo{min-height:510px;background:linear-gradient(145deg,#e6dbcf,#d2c2b2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#766654;font-size:.68rem;letter-spacing:.17em}
-.about-photo small{font-size:.7rem;letter-spacing:0}
-.about-story h2{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4vw,3.8rem);font-weight:500;line-height:1.12;margin:16px 0 24px}
-.about-story h2 em{color:var(--gold);font-weight:500}
-.about-story>p:not(.eyebrow){color:var(--muted);font-size:.91rem;line-height:1.95;margin-bottom:17px}
-.about-values{display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:23px;margin-top:26px}
-.about-values span{font-size:.58rem;letter-spacing:.12em;color:var(--gold);border:1px solid var(--line);padding:8px 10px}
-@media(max-width:760px){.about-page{padding:58px 6vw 70px}.about-layout{grid-template-columns:1fr;gap:38px}.about-photo{min-height:370px}.simple-page-head{margin-bottom:38px}}
-
-
-/* Clear route back to the homepage and tighter mobile page entrance */
-.about-home-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:10px 0;border-bottom:1px solid var(--gold);font-size:.72rem;letter-spacing:.08em;color:var(--ink);transition:color .2s}
+.about-page{max-width:1280px;margin:0 auto;padding:clamp(38px,6vw,76px) 6vw 88px}
+.about-hero{display:grid;grid-template-columns:1fr .95fr;gap:5vw;align-items:center;min-height:590px}
+.about-hero-copy{padding:20px 0}
+.about-hero-copy h1{font-family:'Playfair Display',serif;font-size:clamp(3.4rem,6.5vw,6rem);line-height:1.02;letter-spacing:-.045em;font-weight:500;margin:24px 0}
+.about-hero-copy h1 em,.about-story h2 em{color:var(--gold);font-weight:500}
+.about-hero-description{max-width:440px;color:var(--muted);font-size:1.02rem;line-height:1.9}
+.about-home-link{display:inline-flex;align-items:center;margin-top:34px;padding:0 0 8px;border-bottom:1px solid var(--gold);font-size:.76rem;letter-spacing:.06em;color:var(--ink);transition:color .2s}
 .about-home-link:hover{color:var(--gold)}
+.about-photo{position:relative;min-height:590px;height:min(66vw,720px);max-height:720px;background:linear-gradient(145deg,#e6dbcf,#d2c2b2);overflow:hidden}
+.about-photo img{display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 35%}
+.about-photo-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:#766654;font-size:.68rem;letter-spacing:.17em}
+.about-photo-empty small{font-size:.75rem;letter-spacing:0}
+.about-story{max-width:850px;margin:clamp(70px,10vw,120px) auto 0;padding-top:48px;border-top:1px solid var(--line)}
+.about-story h2{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,5vw,4.3rem);font-weight:500;line-height:1.08;letter-spacing:-.035em;margin:16px 0 26px}
+.about-story-copy{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.about-story-copy p{color:var(--muted);font-size:.92rem;line-height:1.95}
+.about-values{display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:23px;margin-top:28px}
+.about-values span{font-size:.58rem;letter-spacing:.12em;color:var(--gold);border:1px solid var(--line);padding:8px 10px}
 @media(max-width:760px){
-  .about-page{padding-top:34px;padding-bottom:54px}
-  .simple-page-head{margin-bottom:26px}
-  .simple-page-head h1{font-size:clamp(3rem,12vw,4.2rem);margin:12px 0}
-  .simple-page-head>p:last-of-type{font-size:.88rem;line-height:1.65}
-  .about-home-link{margin-top:16px}
-  .about-layout{gap:28px}
-  .about-photo{min-height:290px}
-}
-
-/* Match About page type scale and spacing with the rest of the site */
-.about-page{max-width:1180px;padding:64px 6vw 76px}
-.simple-page-head h1{font-size:clamp(2.8rem,5.5vw,4.8rem)}
-.simple-page-head>p:last-child{font-size:.9rem;line-height:1.75}
-.about-story h2{font-size:clamp(2.2rem,4vw,3.35rem)}
-@media(max-width:760px){
- .about-page{padding:38px 5vw 52px}
- .simple-page-head h1{font-size:clamp(2.65rem,10vw,3.5rem)}
- .simple-page-head>p:last-child{font-size:.82rem;line-height:1.65}
- .about-photo{min-height:280px}
- .about-story h2{font-size:clamp(2rem,7.8vw,2.65rem)}
+ .about-page{padding:30px 5vw 58px}
+ .about-hero{grid-template-columns:1fr;gap:26px;min-height:0}
+ .about-hero-copy{padding:14px 0 0}
+ .about-hero-copy h1{font-size:clamp(3.25rem,12vw,4.5rem);margin:15px 0}
+ .about-hero-description{font-size:.9rem;line-height:1.7;max-width:340px}
+ .about-home-link{margin-top:19px}
+ .about-photo{height:auto;min-height:0;aspect-ratio:4/5;max-height:none}
+ .about-photo img{object-position:center 34%}
+ .about-story{margin-top:58px;padding-top:32px}
+ .about-story h2{font-size:clamp(2.3rem,9vw,3.2rem);margin:13px 0 20px}
+ .about-story-copy{grid-template-columns:1fr;gap:12px}
+ .about-values{margin-top:20px}
 }
