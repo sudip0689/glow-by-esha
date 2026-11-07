@@ -4,7 +4,8 @@ import '../styles/Admin.css';
 
 const folders = [
   { value: 'person-1-red', label: 'Red Bridal Look' },
-  { value: 'person-2-white', label: 'White & Red Bengali Look' }
+  { value: 'person-2-white', label: 'White & Red Bengali Look' },
+  { value: 'other-photos', label: 'Other Photos' }
 ];
 
 function Admin() {
