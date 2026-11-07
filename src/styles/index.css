@@ -16,3 +16,22 @@ h1,h2,h3,h4{font-weight:500}
 .button span{font-size:1rem}
 .button-dark{background:var(--ink);color:var(--white)}
 .button-light{background:var(--white);color:var(--ink)}
+
+
+/* Bengali typography refinement — Noto Sans Bengali */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+
+:lang(bn),
+[lang="bn"],
+.bn-text{
+  font-family:'Noto Sans Bengali','Noto Sans',sans-serif;
+  font-weight:400;
+  letter-spacing:0;
+  line-height:1.85;
+  word-break:normal;
+  overflow-wrap:break-word;
+  text-rendering:optimizeLegibility;
+}
+@media(max-width:800px){
+  :lang(bn),[lang="bn"],.bn-text{font-size:15px;line-height:1.9}
+}
