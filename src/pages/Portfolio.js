@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 import '../styles/Portfolio.css';
 
@@ -9,6 +10,15 @@ const collections = [
 
 function Portfolio() {
   const [gallery, setGallery] = useState({});
+  const location = useLocation();
+  useEffect(() => {
+    if (!location.hash) return;
+    const targetId = decodeURIComponent(location.hash.slice(1));
+    const timer = window.setTimeout(() => {
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
+    return () => window.clearTimeout(timer);
+  }, [location.hash]);
   useEffect(() => {
     let active = true;
     Promise.all(collections.map(async collection => {
