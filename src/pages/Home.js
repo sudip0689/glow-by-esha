@@ -15,30 +15,28 @@ function Home() {
   }, []);
   return (
     <main className="home">
-      <section className="hero makeup-hero">
-        <div className="hero-copy makeup-hero-copy">
-          <p className="eyebrow">BRIDAL MAKEUP ARTISTRY</p>
-          <h1>Beauty is in<br /><em>the details.</em></h1>
-          <p className="hero-description">Thoughtful makeup for brides and special occasions. Beautifully considered, personally created.</p>
-          <div className="hero-actions makeup-hero-actions">
-            <Link to="/portfolio" className="button button-dark">Explore portfolio <span>↗</span></Link>
+      <section className="hero">
+        <div className="hero-copy">
+          <p className="eyebrow">MAKEUP • BEAUTY • CONFIDENCE</p>
+          <h1>Beauty, with<br /><em>a personal touch.</em></h1>
+          <p className="hero-description">Thoughtful makeup artistry for your most meaningful moments. Explore the work, discover the details, and find your look.</p>
+          <div className="hero-actions">
+            <Link to="/portfolio" className="button button-dark">Explore the portfolio <span>↗</span></Link>
             <Link to="/about" className="text-link">Meet Esha</Link>
           </div>
-          <div className="makeup-service-line"><span>✧</span> Bridal <i /> Party <i /> Soft Glam</div>
+          <div className="hero-note"><span className="note-line" /> A beauty portfolio by Glow By Esha</div>
         </div>
-        <div className="makeup-hero-art" aria-label="Close-up makeup artistry details">
-          <div className="makeup-eye-image" role="img" aria-label="Close-up eye makeup detail" />
-          <div className="makeup-art-caption"><span>THE ART OF DETAIL</span><span>GLOW BY ESHA</span></div>
-          <div className="makeup-art-seal">BEAUTY<br/>IN DETAIL</div>
-        </div>
-      </section>
-
-      <section className="makeup-focus">
-        <div className="makeup-focus-heading"><p className="eyebrow">EXPLORE OUR WORK</p><h2>Made with <em>intention.</em></h2></div>
-        <div className="makeup-focus-grid">
-          <Link to="/portfolio" className="makeup-focus-card eye-detail"><span className="focus-index">01</span><span className="focus-title">Eye makeup<br/>details <b>↗</b></span></Link>
-          <Link to="/portfolio" className="makeup-focus-card brush-detail"><span className="focus-index">02</span><span className="focus-title">Makeup<br/>artistry <b>↗</b></span></Link>
-          <Link to="/portfolio" className="makeup-focus-card lip-detail"><span className="focus-index">03</span><span className="focus-title">Lip<br/>finishing <b>↗</b></span></Link>
+        <div className="hero-art hero-editorial" aria-label="Featured bridal portfolio">
+          <div className="editorial-main">
+            {homePhotos.red[0] ? <img className="home-hero-photo" src={homePhotos.red[0]} alt="Red bridal makeup look by Glow By Esha" /> : <div className="photo-placeholder"><span>GLOW BY ESHA</span><small>Bridal artistry · Personal expression</small></div>}
+            <div className="editorial-photo-label"><span>01</span><span>THE RED BRIDAL LOOK</span></div>
+          </div>
+          <div className="editorial-side">
+            {homePhotos.white[0] ? <img src={homePhotos.white[0]} alt="Traditional Bengali bridal makeup by Glow By Esha" /> : <div className="editorial-side-placeholder">E.</div>}
+            <div className="editorial-side-caption"><span>02 / BENGALI BRIDAL</span><span>Beauty rooted in tradition</span></div>
+            <span className="editorial-seal">GLOW<br/>BY ESHA</span>
+          </div>
+          <div className="editorial-footnote">A PORTFOLIO OF BRIDAL STORIES <span>EST. WITH CARE</span></div>
         </div>
       </section>
 
