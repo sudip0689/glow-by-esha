@@ -3,42 +3,13 @@ import '../styles/About.css';
 
 function About() {
   return (
-    <div className="about">
-      <div className="about-header">
-        <h1>About Esha</h1>
-      </div>
-
-      <div className="about-container">
-        <div className="about-image">
-          <div className="about-placeholder">👩‍💼</div>
-        </div>
-        <div className="about-content">
-          <h2>Professional Makeup Artist</h2>
-          <p>
-            Hi! I'm Esha, a passionate makeup artist dedicated to bringing out the best in every client. With over 8 years of experience in the beauty industry, I specialize in creating stunning looks for all occasions.
-          </p>
-          <p>
-            My journey began with a love for creativity and beauty. I've trained under renowned makeup artists and have worked with clients for weddings, photoshoots, parties, and special events.
-          </p>
-          <p>
-            I believe every person has their own unique beauty. My goal is to enhance your natural features while making you feel confident and gorgeous.
-          </p>
-
-          <div className="about-skills">
-            <h3>Specializations</h3>
-            <ul>
-              <li>✨ Bridal & Engagement Makeup</li>
-              <li>💄 Party & Event Makeup</li>
-              <li>📸 Photoshoot & Portfolio Makeup</li>
-              <li>👄 Contouring & Highlighting</li>
-              <li>💎 Airbrush Makeup</li>
-              <li>🎨 Creative & Artistic Makeup</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+    <main className="about-page">
+      <header className="simple-page-head"><p className="eyebrow">THE ARTIST</p><h1>Meet <em>Esha.</em></h1><p>A personal approach to makeup, beauty and self-expression.</p></header>
+      <section className="about-layout">
+        <div className="about-photo"><span>ESHA'S PORTRAIT</span><small>Add a real artist photograph here</small></div>
+        <div className="about-story"><p className="eyebrow">A NOTE FROM ESHA</p><h2>Makeup should highlight you,<br /><em>not hide you.</em></h2><p>Glow By Esha is a space to celebrate individual beauty through thoughtful makeup artistry. The focus is on understanding each person's style, occasion and comfort, then creating a look that feels like them.</p><p>This page will be updated with Esha's personal story, training and experience once those details are confirmed.</p><div className="about-values"><span>PERSONAL STYLE</span><span>THOUGHTFUL DETAILS</span><span>CONFIDENT BEAUTY</span></div></div>
+      </section>
+    </main>
   );
 }
-
 export default About;
