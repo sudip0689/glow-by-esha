@@ -39,8 +39,9 @@ function Home() {
           <h1>Beauty, with<br /><em>a personal touch.</em></h1>
           <p className="hero-description">আপনার বিশেষ মুহূর্তের জন্য যত্ন, দক্ষতা ও আপনার নিজস্ব সৌন্দর্যকে গুরুত্ব দিয়ে তৈরি Makeup Artistry।</p>
           <div className="hero-actions">
-            <Link to="/portfolio" className="button button-dark">Explore the portfolio <span>↗</span></Link>
-            <Link to="/about" className="text-link">Meet Esha</Link>
+            <a href="https://wa.me/918116399882?text=Hello%20Glow%20By%20Esha!%20I%20would%20like%20to%20enquire%20about%20a%20makeup%20booking." className="button button-dark hero-booking-link" target="_blank" rel="noopener noreferrer" aria-label="Enquire about a makeup booking on WhatsApp">Book on WhatsApp <span>↗</span></a>
+            <Link to="/portfolio" className="text-link">Explore the portfolio</Link>
+            <Link to="/about" className="hero-about-link">Meet Esha</Link>
           </div>
           <div className="hero-note"><span className="note-line" /> আপনার সৌন্দর্য, আপনার নিজস্ব স্টাইল</div>
         </div>
