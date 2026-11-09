@@ -256,3 +256,31 @@
     row-gap:15px;
   }
 }
+
+
+/* Step 3: Bengali typography refinement for portfolio copy */
+.bridal-portfolio .portfolio-intro>p:last-child,
+.bridal-portfolio .portfolio-feature-copy p,
+.bridal-portfolio .collection-heading>p,
+.bridal-portfolio .collection-empty,
+.bridal-portfolio .portfolio-booking p,
+.bridal-portfolio .portfolio-endnote p{
+  font-family:'Noto Sans Bengali','DM Sans',sans-serif;
+  font-weight:400;
+  letter-spacing:0;
+  line-height:1.9;
+  word-break:normal;
+  overflow-wrap:break-word;
+  text-rendering:optimizeLegibility;
+}
+@media(max-width:700px){
+  .bridal-portfolio .portfolio-intro>p:last-child,
+  .bridal-portfolio .portfolio-feature-copy p,
+  .bridal-portfolio .collection-heading>p,
+  .bridal-portfolio .collection-empty,
+  .bridal-portfolio .portfolio-booking p,
+  .bridal-portfolio .portfolio-endnote p{
+    font-size:15px;
+    line-height:1.9;
+  }
+}
