@@ -34,7 +34,7 @@ function Contact() {
         <p className="eyebrow">BOOKING ENQUIRY</p>
         <h1>Your occasion.<br /><em>Your kind of glow.</em></h1>
         <p className="contact-lead">আপনার বিশেষ দিনের Makeup Look নিয়ে পরিকল্পনা করছেন? নিচের form-টি পূরণ করুন। আপনার details WhatsApp-এ পাঠানোর জন্য প্রস্তুত হবে। Esha availability ও pricing জানিয়ে দেবেন।</p>
-        <form className="booking-form" onSubmit={submitBooking} noValidate>
+        <form id="booking-form" className="booking-form" onSubmit={submitBooking} noValidate>
           <label>Full name<input value={form.name} onChange={e => update('name', e.target.value)} placeholder="Your name" autoComplete="name" />{errors.name && <small className="booking-error">{errors.name}</small>}</label>
           <label>Mobile number<input value={form.phone} onChange={e => update('phone', e.target.value)} placeholder="Your contact number" inputMode="tel" autoComplete="tel" />{errors.phone && <small className="booking-error">{errors.phone}</small>}</label>
           <label>Makeup service<select value={form.service} onChange={e => update('service', e.target.value)}><option>Bridal Makeup</option><option>Party Makeup</option><option>Engagement & Occasion</option><option>Other</option></select></label>
