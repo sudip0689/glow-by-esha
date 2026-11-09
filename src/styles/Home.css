@@ -556,3 +556,10 @@
  .category-card .category-description{font-size:.72rem}
  .intro-strip{font-size:.68rem}
 }
+
+
+/* Primary WhatsApp enquiry action in the hero */
+.hero-actions .hero-booking-link{background:#351d22;color:#fffaf3;border:1px solid #351d22;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:13px 22px;font-size:.82rem;letter-spacing:.025em;box-shadow:0 5px 16px rgba(53,29,34,.12)}
+.hero-actions .hero-booking-link:hover{background:#503039;border-color:#503039;transform:translateY(-1px)}
+.hero-actions .hero-about-link{font-size:.8rem;color:var(--muted);text-decoration:underline;text-decoration-color:rgba(166,139,101,.55);text-underline-offset:5px}
+@media(max-width:800px){.hero-actions .hero-booking-link{min-height:46px;padding:12px 17px;font-size:.82rem}.hero-actions .hero-about-link{font-size:.78rem}}
