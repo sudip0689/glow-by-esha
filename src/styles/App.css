@@ -1,1 +1,9 @@
 .App{min-height:100vh;display:flex;flex-direction:column;background:var(--paper)}.App>main{flex:1} 
+
+/* Floating WhatsApp booking shortcut */
+.floating-whatsapp{position:fixed;right:22px;bottom:22px;z-index:1100;display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 17px;border-radius:999px;background:#236b45;color:#fff;box-shadow:0 7px 24px rgba(25,45,32,.22);font-size:.78rem;font-weight:700;letter-spacing:.025em;transition:transform .2s,background .2s}
+.floating-whatsapp:hover{background:#1b5638;transform:translateY(-2px)}
+.floating-whatsapp-icon{font-size:1.15rem;line-height:1}
+.floating-whatsapp-arrow{font-size:.95rem;opacity:.85}
+@media(max-width:760px){.floating-whatsapp{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));min-height:46px;padding:0 15px;font-size:.74rem;gap:8px}}
+@media(prefers-reduced-motion:reduce){.floating-whatsapp{transition:none}}
