@@ -77,7 +77,7 @@ function Services() {
 
       <div className="services-cta">
         <div><p>Have a look in mind?</p><span>আপনার অনুষ্ঠানের details পাঠান—চলুন আপনার পছন্দের সাজ নিয়ে কথা বলি।</span></div>
-        <Link to="/contact" className="button button-dark">Enquire on WhatsApp <span>↗</span></Link>
+        <Link to="/contact#booking-form" className="button button-dark">Enquire on WhatsApp <span>↗</span></Link>
       </div>
     </main>
   );
