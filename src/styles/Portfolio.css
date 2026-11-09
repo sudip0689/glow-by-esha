@@ -197,3 +197,37 @@
  .portfolio-card-copy strong{font-size:.98rem}
  .portfolio-clean-gallery{gap:8px}
 }
+
+
+/* Step 1: refine the featured bridal photo on mobile */
+@media(max-width:700px){
+  .portfolio-feature-image{
+    aspect-ratio:4/5;
+    max-height:520px;
+    overflow:hidden;
+  }
+  .portfolio-feature-image img{
+    object-position:center 22%;
+  }
+  .portfolio-feature-copy{
+    padding:14px 17px 16px;
+  }
+  .portfolio-feature-copy .eyebrow{
+    font-size:.52rem;
+    letter-spacing:.13em;
+  }
+  .portfolio-feature-copy h2{
+    font-size:1.9rem;
+    margin:6px 0 5px;
+    line-height:1.02;
+  }
+  .portfolio-feature-copy p{
+    font-size:.78rem;
+    line-height:1.55;
+    margin:0 0 10px;
+  }
+  .portfolio-feature-link{
+    padding:8px 12px;
+    font-size:.68rem;
+  }
+}
