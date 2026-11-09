@@ -10,6 +10,17 @@ import Contact from './pages/Contact';
 import Admin from './pages/Admin';
 import './styles/App.css';
 
+function FloatingWhatsApp() {
+  const message = encodeURIComponent('Hello Glow By Esha! I would like to enquire about a makeup booking.');
+  return (
+    <a className="floating-whatsapp" href={`https://wa.me/918116399882?text=${message}`} target="_blank" rel="noopener noreferrer" aria-label="Book a makeup service on WhatsApp">
+      <span className="floating-whatsapp-icon" aria-hidden="true">◉</span>
+      <span>WhatsApp Booking</span>
+      <span className="floating-whatsapp-arrow" aria-hidden="true">↗</span>
+    </a>
+  );
+}
+
 function PublicSite() {
   return (
     <div className="App">
@@ -23,6 +34,7 @@ function PublicSite() {
         <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }
