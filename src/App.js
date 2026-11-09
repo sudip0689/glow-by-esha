@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -29,6 +29,15 @@ function PublicSite() {
 
 function AppContent() {
   const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      requestAnimationFrame(() => {
+        document.getElementById(location.hash.slice(1))?.scrollIntoView({ block: 'start' });
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname, location.hash]);
   const path = location.pathname.replace(/\/+$/, '') || '/';
   return path.toLowerCase() === '/admin' ? <Admin /> : <PublicSite />;
 }
