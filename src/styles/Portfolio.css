@@ -120,3 +120,80 @@
 .image-zoom-hint{position:absolute;right:12px;bottom:12px;padding:7px 10px;background:rgba(20,15,14,.65);color:#fff;font-size:.62rem;letter-spacing:.08em;opacity:0;transition:opacity .2s}
 .bridal-tile:hover .image-zoom-hint,.gallery-image-button:focus-visible .image-zoom-hint{opacity:1}
 @media(max-width:700px){.photo-lightbox{padding:58px 10px 18px}.image-zoom-hint{opacity:1;font-size:.55rem;padding:6px 8px}}
+
+
+/* Clean, premium portfolio layout */
+.bridal-portfolio{max-width:1120px;padding:58px 6vw 76px}
+.bridal-portfolio .portfolio-intro{max-width:760px;text-align:left;margin:0 auto 34px;padding:0}
+.bridal-portfolio .portfolio-intro h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,5.2rem);line-height:.98;letter-spacing:-.045em;margin:16px 0}
+.bridal-portfolio .portfolio-intro h1 em{color:var(--gold)}
+.bridal-portfolio .portfolio-intro>p:last-child{margin:0;max-width:520px;font-size:1rem;line-height:1.8;color:var(--muted)}
+.portfolio-feature{position:relative;display:grid;grid-template-columns:1.05fr .95fr;min-height:390px;overflow:hidden;border-radius:5px;background:#3a211f;margin:0 0 24px}
+.portfolio-feature-image{display:block;position:relative;width:100%;height:100%;min-height:390px;padding:0;border:0;background:#3a211f;cursor:zoom-in}
+.portfolio-feature-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 28%}
+.portfolio-feature-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:38px clamp(24px,5vw,64px);color:#fffaf3}
+.portfolio-feature-copy .eyebrow{color:#d8bd8e;font-size:.58rem;letter-spacing:.16em}
+.portfolio-feature-copy h2{font:500 clamp(2.3rem,4.5vw,3.8rem)/1.05 'Playfair Display',serif;margin:16px 0 10px}
+.portfolio-feature-copy h2 em{color:#d8bd8e}
+.portfolio-feature-copy p{font-size:.9rem;line-height:1.8;color:rgba(255,250,243,.82);margin-bottom:24px}
+.portfolio-feature-link{display:inline-flex;align-items:center;gap:24px;padding:12px 18px;border:1px solid #d8bd8e;color:#fffaf3;font-size:.78rem}
+.portfolio-collection-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:0 0 54px}
+.portfolio-collection-card{position:relative;display:block;overflow:hidden;aspect-ratio:16/7;background:#3a211f;color:#fff;border-radius:4px}
+.portfolio-collection-card img,.portfolio-card-shade{position:absolute;inset:0;width:100%;height:100%}
+.portfolio-collection-card img{object-fit:cover;object-position:center 30%;transition:transform .6s ease}
+.portfolio-card-shade{background:linear-gradient(90deg,rgba(36,17,18,.76),rgba(36,17,18,.08))}
+.portfolio-collection-card:hover img{transform:scale(1.035)}
+.portfolio-card-copy{position:absolute;inset:auto 22px 20px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.portfolio-card-copy small{font-size:.55rem;letter-spacing:.15em;color:#e1c99e}
+.portfolio-card-copy strong{font:500 clamp(1.3rem,2.8vw,2rem)/1.1 'Playfair Display',serif}
+.portfolio-card-copy>span{font-size:.7rem;margin-top:4px}
+.bridal-portfolio .bridal-collection{border-top:1px solid var(--line);margin:0;padding:48px 0 54px;scroll-margin-top:28px}
+.bridal-portfolio .collection-heading{max-width:650px;text-align:left;margin:0 0 24px}
+.bridal-portfolio .collection-heading h2{font:500 clamp(2rem,4vw,3rem)/1.1 'Playfair Display',serif;letter-spacing:-.025em;margin:9px 0}
+.bridal-portfolio .collection-heading>p{font-size:.88rem;line-height:1.8;color:var(--muted)}
+.portfolio-clean-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.portfolio-clean-photo{position:relative;display:block;width:100%;padding:0;border:0;background:#e8ded4;aspect-ratio:4/5;overflow:hidden;cursor:zoom-in}
+.portfolio-clean-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%;transition:transform .6s ease}
+.portfolio-clean-photo:hover img{transform:scale(1.025)}
+.collection-empty{color:var(--muted);font-size:.86rem;padding:12px 0}
+.portfolio-booking{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 30px;margin:20px 0 0;background:#efe5da;border-radius:4px}
+.portfolio-booking .eyebrow{font-size:.55rem;letter-spacing:.15em}
+.portfolio-booking h2{font:500 1.8rem/1.15 'Playfair Display',serif;margin:7px 0}
+.portfolio-booking p{font-size:.85rem;color:var(--muted)}
+.portfolio-booking>a{display:inline-flex;align-items:center;justify-content:center;gap:20px;background:#65152b;color:#fffaf3;padding:14px 20px;font-size:.8rem;white-space:nowrap}
+.portfolio-endnote{margin-top:48px}
+.portfolio-footer-link{display:inline-block;margin-top:14px;font-size:.78rem;border-bottom:1px solid var(--gold);padding-bottom:4px}
+@media(max-width:700px){
+ .bridal-portfolio{padding:38px 5vw 54px}
+ .bridal-portfolio .portfolio-intro{margin-bottom:25px}
+ .bridal-portfolio .portfolio-intro h1{font-size:clamp(2.7rem,11vw,3.6rem);line-height:1}
+ .bridal-portfolio .portfolio-intro>p:last-child{font-size:.9rem;line-height:1.75}
+ .portfolio-feature{grid-template-columns:1fr;min-height:0;margin-bottom:16px}
+ .portfolio-feature-image{min-height:0;aspect-ratio:4/3}
+ .portfolio-feature-copy{padding:19px 20px 22px}
+ .portfolio-feature-copy h2{font-size:2.15rem;margin:8px 0}
+ .portfolio-feature-copy p{font-size:.82rem;margin-bottom:15px}
+ .portfolio-feature-link{padding:10px 14px;font-size:.72rem}
+ .portfolio-collection-nav{gap:10px;margin-bottom:34px}
+ .portfolio-collection-card{aspect-ratio:4/5}
+ .portfolio-card-copy{inset:auto 12px 13px;gap:5px}
+ .portfolio-card-copy small{font-size:.45rem;letter-spacing:.1em}
+ .portfolio-card-copy strong{font-size:1.08rem}
+ .portfolio-card-copy>span{font-size:.63rem}
+ .bridal-portfolio .bridal-collection{padding:31px 0 37px}
+ .bridal-portfolio .collection-heading{margin-bottom:18px}
+ .bridal-portfolio .collection-heading h2{font-size:2rem}
+ .bridal-portfolio .collection-heading>p{font-size:.84rem;line-height:1.75}
+ .portfolio-clean-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .portfolio-clean-photo{aspect-ratio:3/4}
+ .portfolio-booking{display:block;padding:21px 18px;margin-top:12px}
+ .portfolio-booking h2{font-size:1.55rem}
+ .portfolio-booking p{font-size:.82rem;margin-bottom:16px}
+ .portfolio-booking>a{width:100%;padding:13px 14px}
+ .portfolio-endnote{margin-top:36px}
+}
+@media(max-width:360px){
+ .bridal-portfolio{padding-left:12px;padding-right:12px}
+ .portfolio-card-copy strong{font-size:.98rem}
+ .portfolio-clean-gallery{gap:8px}
+}
