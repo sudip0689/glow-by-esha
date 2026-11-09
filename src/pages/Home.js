@@ -124,7 +124,7 @@ function Home() {
                 <p className="home-service-description">{service.description}</p>
                 <div className="home-service-actions">
                   <Link to="/services" className="home-service-more">Know More <span>↗</span></Link>
-                  <Link to="/contact" className="home-service-book">Book Now <span>↗</span></Link>
+                  <Link to="/contact#booking-form" className="home-service-book">Book Now <span>↗</span></Link>
                 </div>
               </div>
             </article>
@@ -132,7 +132,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="home-cta"><p className="eyebrow">YOUR MOMENT, YOUR LOOK</p><h2>Let's create something<br /><em>beautiful.</em></h2><p>আপনার বিশেষ দিনের সাজ নিয়ে কথা বলতে যোগাযোগ করুন।</p><Link to="/contact" className="button button-light">Get in touch <span>↗</span></Link></section>
+      <section className="home-cta"><p className="eyebrow">YOUR MOMENT, YOUR LOOK</p><h2>Let's create something<br /><em>beautiful.</em></h2><p>আপনার বিশেষ দিনের সাজ নিয়ে কথা বলতে যোগাযোগ করুন।</p><Link to="/contact#booking-form" className="button button-light">Get in touch <span>↗</span></Link></section>
     </main>
   );
 }
