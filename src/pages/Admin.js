@@ -64,8 +64,8 @@ function Admin() {
     setLoading(true); setMessage('');
     let uploaded = 0;
     for (const file of files) {
-      if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > 10 * 1024 * 1024) {
-        setMessage(file.name + ' skipped: use JPG, PNG or WEBP up to 10 MB.');
+      if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > 20 * 1024 * 1024) {
+        setMessage(file.name + ' skipped: use JPG, PNG or WEBP up to 20 MB.');
         continue;
       }
       const safeName = file.name.normalize('NFKD').replace(/[^a-zA-Z0-9._-]/g, '-');
