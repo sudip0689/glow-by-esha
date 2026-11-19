@@ -6,6 +6,7 @@ import { supabase, PHOTO_BUCKET } from '../lib/supabase';
 
 function Home() {
   const [homePhotos, setHomePhotos] = useState({ red: [], white: [] });
+  const [royalPhotos, setRoyalPhotos] = useState([]);
   const [servicePhotos, setServicePhotos] = useState([]);
   const [photosLoaded, setPhotosLoaded] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
@@ -13,16 +14,17 @@ function Home() {
   const heroPhoto = homePhotos.red.find(url => /DSC00616\.JPG/i.test(decodeURIComponent(url))) || homePhotos.red[0];
   useEffect(() => {
     let active = true;
-    Promise.all(['person-1-red', 'person-2-white', 'other-photos'].map(async folder => {
+    Promise.all(['person-1-red', 'person-2-white', 'other-photos', 'royal-bengali-bride'].map(async folder => {
       const { data } = await supabase.storage.from(PHOTO_BUCKET).list(folder, { limit: 100, sortBy: { column: 'name', order: 'asc' } });
       return (data || []).filter(item => item.name && !item.name.startsWith('.')).map(item => supabase.storage.from(PHOTO_BUCKET).getPublicUrl(folder + '/' + item.name).data.publicUrl);
-    })).then(([red, white, other]) => {
+    })).then(([red, white, other, royal]) => {
       if (active) {
         setHomePhotos({ red, white });
+        setRoyalPhotos(royal);
         // Storage listing order is Party, Bridal, Special; map each photo to its correct service.
         setServicePhotos(other.slice(-3));
       }
-    }).catch(() => { if (active) { setHomePhotos({ red: [], white: [] }); setServicePhotos([]); } }).finally(() => { if (active) setPhotosLoaded(true); });
+    }).catch(() => { if (active) { setHomePhotos({ red: [], white: [] }); setRoyalPhotos([]); setServicePhotos([]); } }).finally(() => { if (active) setPhotosLoaded(true); });
     return () => { active = false; };
   }, []);
   // Use the three latest photos uploaded by Esha for the service categories.
@@ -74,6 +76,11 @@ function Home() {
           <Link to="/portfolio#person-two" className="category-card category-party" style={homePhotos.white[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.78) 100%),url(" + homePhotos.white[0] + ")" } : {}}>
             <span className="category-number">02 <small> / 05 LOOKS</small></span>
             <div className="category-copy"><p>THE BRIDDHI COLLECTION</p><h3>Briddhi<br /><em>Look</em></h3><span className="category-description">ঐতিহ্য আর আধুনিকতার মেলবন্ধনে এক অনন্য সাজ।</span></div>
+            <span className="category-arrow">Explore collection ↗</span>
+          </Link>
+          <Link to="/portfolio#royal-bengali-bride" className="category-card category-natural" style={royalPhotos[0] ? { backgroundImage: "linear-gradient(180deg,rgba(25,16,15,.02) 20%,rgba(25,16,15,.82) 100%),url(" + royalPhotos[0] + ")" } : {}}>
+            <span className="category-number">03 <small> / ROYAL COLLECTION</small></span>
+            <div className="category-copy"><p>THE ROYAL BENGALI BRIDE COLLECTION</p><h3>Royal Bengali<br /><em>Bride</em></h3><span className="category-description">লাল বেনারসি, ঐতিহ্যবাহী সাজ আর বাঙালি কনের চিরন্তন সৌন্দর্য।</span></div>
             <span className="category-arrow">Explore collection ↗</span>
           </Link>
         </div>
