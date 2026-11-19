@@ -5,7 +5,8 @@ import '../styles/Portfolio.css';
 
 const collections = [
   { id: 'person-one', number: '01', title: 'Muslim Bridal Look', shortTitle: 'Muslim Bridal', subtitle: 'THE MUSLIM BRIDAL COLLECTION', description: 'আভিজাত্য, নিখুঁত ডিটেলিং আর ব্যক্তিত্বের ছোঁয়ায় সাজানো এক বিশেষ ব্রাইডাল লুক।', folder: 'person-1-red' },
-  { id: 'person-two', number: '02', title: 'Briddhi Look', shortTitle: 'Briddhi', subtitle: 'THE BRIDDHI COLLECTION', description: 'ঐতিহ্য ও আধুনিকতার মেলবন্ধনে যত্নে তৈরি এক অনন্য সাজ।', folder: 'person-2-white' }
+  { id: 'person-two', number: '02', title: 'Briddhi Look', shortTitle: 'Briddhi', subtitle: 'THE BRIDDHI COLLECTION', description: 'ঐতিহ্য ও আধুনিকতার মেলবন্ধনে যত্নে তৈরি এক অনন্য সাজ।', folder: 'person-2-white' },
+  { id: 'royal-bengali-bride', number: '03', title: 'The Royal Bengali Bride', shortTitle: 'Royal Bengali Bride', subtitle: 'THE ROYAL BENGALI BRIDE COLLECTION', description: 'লাল বেনারসি, ঐতিহ্যবাহী সাজ আর বাঙালি কনের চিরন্তন সৌন্দর্য।', folder: 'royal-bengali-bride' }
 ];
 
 function Portfolio() {
